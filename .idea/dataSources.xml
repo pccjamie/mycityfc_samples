@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="Rails mycityfc: development" uuid="ef2d5859-d7f0-45c0-85e6-05f521251964">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:mycityfc_development</jdbc-url>
+      <jdbc-url>jdbc:postgresql:mycityfc</jdbc-url>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails mycityfc: test" uuid="e19f2bc7-969a-417e-9029-36dda0407422">

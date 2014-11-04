@@ -33,10 +33,8 @@ gem 'spring', group: :development
 gem 'devise', '~> 3.3.0'
 gem 'omniauth-facebook'
 
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
 
 # for manual install of foundation
 gem 'foundation-rails', group: [:development, :production]
@@ -45,9 +43,7 @@ gem 'foundation-rails', group: [:development, :production]
 gem 'geocoder'
 gem 'chronic' #natural language time formatter
 gem 'activesupport' #, "~> 3.1.1"
-# gem 'httparty' # for espn data
 gem 'nokogiri' # for mls schedule
-
 
 # config env vars for heroku deployment
 gem 'figaro'
