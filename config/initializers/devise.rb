@@ -234,7 +234,17 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
-  # ==> Warden configuration
+
+	# TODO - Add scope
+	config.omniauth :facebook, ENV["facebook_app_id"], ENV["facebook_app_secret"]
+
+	# TODO - determine whether to convert prev to THIS format and handle accordingly
+	#Devise.facebook_app_id = ENV["facebook_app_id"]
+	#Devise.facebook_app_secret = ENV["facebook_app_secret"]
+
+
+
+	# ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
   #
