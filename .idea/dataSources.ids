@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails mycityfc: development" uuid="ef2d5859-d7f0-45c0-85e6-05f521251964">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails mycityfc: test" uuid="e19f2bc7-969a-417e-9029-36dda0407422">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails mycityfc: production" uuid="fbb253b3-e744-4dae-98ff-7f6b67a84718">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
