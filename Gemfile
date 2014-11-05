@@ -10,6 +10,7 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
@@ -25,29 +26,31 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 
-# TODO - reenable Spring gem once generator hang issues are resolved - see http://stackoverflow.com/questions/23165506/rails-spring-breaking-generators
+# TODO - reenable Spring gem once generator hang issues are resolved - see http://stackoverflow.com/questions/23165506/rails-spring-breaking-generators. Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+
 # gem 'spring', group: :development
 
 
-#	devise /omniauth
+#	TODO - add additional providers at some point
 gem 'devise', '~> 3.3.0'
 gem 'omniauth-facebook'
 
+# TODO - enable once I have time to work on implementing native authentication
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# for manual install of foundation
+# Foundation
 gem 'foundation-rails', group: [:development, :production]
 
 
-gem 'geocoder'
+
+gem 'geocoder' #geocoding
 gem 'chronic' #natural language time formatter
 gem 'activesupport' #, "~> 3.1.1"
 gem 'nokogiri' # for mls schedule
 
-# config env vars for heroku deployment
+# config env vars for Heroku deployment
 gem 'figaro'
 
 
