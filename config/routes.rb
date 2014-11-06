@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 	# Route sign out to Devise default session ctrl destroy method
 	devise_scope :user do
 		# if ONLY using omniauth, add a sign_in route (or use root)
-		get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
+		# get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
 		# required
 		get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
 	end
