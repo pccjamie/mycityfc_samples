@@ -1,0 +1,26 @@
+@import "colors";
+@import "typography";
+@import "mixins";
+
+
+
+
+@media only screen and (max-width: 40em) {
+
+  #nav-pri .branding {
+
+    text-align: center;
+
+    h1.logo {
+      display: none
+    }
+    h1.logo a {
+      font-size: 2em;
+    }
+  }
+
+  #js-schedule .js-single-game {
+    width: 100%
+  }
+
+}

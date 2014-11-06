@@ -1,0 +1,454 @@
+@import "colors";
+@import "typography";
+@import "mixins";
+
+body {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top;
+	background-color: $steel;
+	background-image: asset-data-url("closeup_flip2.jpg");
+}
+
+.clearfix {
+	margin: 5px 0 15px 0;
+
+	&:after {
+		content: " "; /* Older browser do not support empty content */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		clear: both;
+	}
+
+}
+
+table {
+	display: block;
+	position: relative;
+	background: 0;
+	border: 0;
+	border-collapse: collapse;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	display: inline;
+	text-transform: uppercase;
+
+}
+
+h1, h2, h3, h4, h5, a, li {
+	color: aqua;
+	font-family: $font-special;
+	letter-spacing: 1px;
+	font-weight: normal
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, nav * a, nav * li {
+	color: aqua;
+	text-transform: uppercase
+}
+
+li a {
+	cursor: pointer
+}
+
+a {
+	color: $white;
+	background-color: 0;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: normal;
+	display: inline-block;
+	font-weight: normal;
+
+	//	@include shift-color(color, 200ms, ease-in-out);
+
+	&:hover {
+		background-color: 0;
+		color: $yellow
+	}
+
+}
+
+p {
+	font-family: $font-normal;
+	color: black;
+	margin-bottom: 0;
+	strong {
+		font-weight: normal;
+	}
+}
+
+//flash messages
+.notice, .alert {
+	height: 100%;
+	width: auto;
+	color: $white;
+	padding: 0;
+	float: none;
+	display: table-cell;
+	vertical-align: middle;
+
+	span {
+		background: $orange;
+	}
+}
+
+.notice_vendor {
+	@extend .notice
+}
+
+.notice_youtube {
+	@extend .notice
+
+}
+
+.notice_geo {
+	@extend .notice
+
+}
+
+.notice_twitter {
+	@extend .notice
+
+}
+
+.notice_content_pending {
+	@extend .notice
+
+}
+
+//nav
+
+nav {
+	height: auto;
+	width: 100%;
+}
+
+#nav-wrap {
+	background: $blue-75;
+}
+
+#nav-primary {
+
+	@extend nav;
+
+	ul {
+		height: 100px;
+
+		li {
+			height: inherit;
+			float: left;
+			background-color: 0;
+			padding: 5px;
+
+			&.logo a {
+				vertical-align: middle;
+				font-size: 2em;
+				line-height: 2em;
+				color: white;
+				text-transform: none;
+			}
+
+			a {
+				height: inherit;
+				display: table-cell;
+				vertical-align: middle;
+
+				background-color: 0;
+				text-decoration: none;
+				color: white;
+				font-size: 1em;
+				letter-spacing: 8px;
+
+				&:hover {
+					color: aqua;
+				}
+
+			}
+
+		}
+	}
+
+	ul.branding {
+
+		.logo {
+			text-shadow: -1x -1px 1px $steel;
+			a {
+				letter-spacing: 12px;
+				text-decoration: none;
+			}
+
+		}
+
+	}
+
+}
+#nav-secondary {
+
+	@extend nav;
+
+	margin-top: 0;
+	padding: 0;
+
+	ul {display: table}
+	ul#admin-menu {padding-right:0}
+
+	li {
+		height: 50px;
+		padding: 5px;
+		letter-spacing: 3px;
+		font-family: $font-special;
+		display: table;
+
+
+		a {
+
+			letter-spacing: 3px;
+			font-family: $font-special;
+			color: $white;
+
+			img {
+					border: 1px solid $white;
+					height: 40px;
+//					padding: 4px;
+				}
+
+			&:hover {
+				text-decoration: none;
+				color: $white;
+			}
+
+		}
+
+		a, span {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+	}
+
+}
+
+
+
+.dropdown {text-align:right;}
+.f-dropdown {
+	background: $blue-75;
+	border: none;
+//	margin-left: -(1000px / 12);
+	margin-top: 5px;
+	margin-left: -6.5rem;
+
+	max-width: none;
+	width: (62.5rem / 12) * 2;
+
+	li {
+		display: inline-block;
+		width:100%;
+
+		a {
+			background:transparent;
+			color: $white;
+
+			&:hover {
+				background: $blue-75;
+				color: $yellow
+			}
+		}
+	}
+}
+
+.f-dropdown::after, .f-dropdown::before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border: inset 0px;
+	border-color: transparent;
+	border-bottom-style: none;
+	position: absolute;
+	top: -12px;
+	left: 10px;
+	z-index: 99;
+}
+
+//titles
+.title {
+	height: auto;
+	width: auto;
+	float: left;
+	padding: 0;
+	text-align: left;
+}
+
+.section-title {
+	@extend .title;
+	padding-right: 5px;
+	text-align: left;
+	background: $black-25;
+	@include border-radius-top-right(10px);
+}
+
+.form-title {
+	@extend .title;
+	padding: 5px;
+	background: $black-25;
+	color: pink;
+}
+
+h3.section-title {
+	font-size: 150%;
+	padding: 5px;
+}
+
+h4.section-title {
+	font-size: 150%;
+	padding: 5px;
+}
+
+.extra-padding {
+	padding-right: 5px;
+}
+
+//tooltips
+.has-tip {
+	height: 40px;width: 40px;padding: 5px;
+	line-height: normal;
+	color: $black;
+	background: $yellow;
+	margin: 0 0 0 5px;
+
+	font: {
+		weight: normal;
+		family: $font-normal;
+	}
+
+	display: none;
+	border-bottom: none;
+	-webkit-border-radius: inherit;
+	-moz-border-radius: inherit;
+	border-radius: inherit;
+
+	&:hover {
+		border-bottom: 0
+	}
+
+}
+
+.has-tip-2{
+	@extend .has-tip;
+	display: block;
+}
+
+.tooltip {
+	z-index: 9999;
+}
+
+//alt views
+#toggle-views {
+	height: 50px;
+	width: 50px;
+	background: transparent;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 9999;
+	@include flag-upper-left(25px, $yellow);
+	@include flag-lower-right(25px, transparent);
+	color: $black;
+
+	#view-tips {
+
+		top: 0px;
+		left: 5px;
+		text-align:center;
+		z-index: 9999;
+		position:fixed;
+		font-size: 12px;
+//		color: $aqua;
+		&:hover {
+			color: red;
+		}
+
+	}
+
+}
+
+//footer
+footer {
+	height: 100px;
+	min-height: 100px;
+	margin-top: 10px;
+	width: 100%;
+	background-color: $steel-50;
+	position: relative;
+	//  left: 0;
+	//  bottom: 0;
+	display: block;
+	* aside.right {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		text-transform: uppercase
+	}
+
+}
+
+//states
+.focused {
+	color: $red;
+}
+
+.trigger {
+	display: inline-block;
+}
+
+.view-on {
+	color: red
+}
+
+.saved {
+	background: yellow;
+}
+
+.data {
+	color: yellow;
+}
+
+.link-to-anchor, .link-to-page {
+	background: $black-50;
+	border: 1px solid white;
+	padding: 0 2.5px;
+	display: block;
+}
+
+//.link-to-anchor, .link-to-page {
+//	margin: 5px 0;
+//	display: inline-block;
+//	//	background: $black-50;
+//	color: $aqua;
+//	text-decoration: none;
+//	padding: 0 2.5px;
+//	text-align: center;
+//	text-transform: uppercase;
+//
+//	&:hover {
+//		background: $aqua;
+//		color: $black;
+//	}
+//}
+
