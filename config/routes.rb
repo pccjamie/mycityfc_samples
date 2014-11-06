@@ -1,61 +1,47 @@
 Rails.application.routes.draw do
 
-	
-  devise_for :users
+	# AUTO GENERATED WITH CONTROLLER / VIEW
+	# get 'static_pages/landing'
 
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+	# generating User model via Devise adds this default route
+	devise_for :users
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+=begin
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+1.Installing gem omniauth-facebook and enabling omniauthable in User model provided two new paths
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+	user_omniauth_authorize_path(provider)
+	user_omniauth_callback_path(provider)
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+2.Use first path in view. Clicking sends user to FB to see permissions and approve.
+	<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
 
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+3.Approval redirects user to the related callback method defined in
+	User::OmniauthCallbacksController
 
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+=end
 
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
+	# SO we need to change devise_for :users by specifying which controller should NOW be used instead of the default controller for handling the callback process (since that is where we defined the facebook method)
+	devise_for :users,
+						 :controllers => {
+							 :omniauth_callbacks => "users/omniauth_callbacks" # User::OmniauthCallbacksController
+						 }
 
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
+	# Route sign out to Devise default session ctrl destroy method
+	devise_scope :user do
+		# if ONLY using omniauth, add a sign_in route (or use root)
+		get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
+		# required
+		get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+	end
 
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+
+	# ROOT
+	#no auth
+	root 'static_pages#landing'
+
+	#with auth
+	#pending
+
 end
