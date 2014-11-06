@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
 
 	# generating User model via Devise adds this default route
-	devise_for :users
+	# devise_for :users
 
 =begin
 
