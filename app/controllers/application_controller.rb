@@ -13,9 +13,9 @@ class ApplicationController < ActionController::Base
 
 
 	# sign_in route helper
-	def new_session_path(user) # defines new path if only using omniauth
-		new_user_session_path
-	end
+	# def new_session_path(user) # defines new path if only using omniauth
+	# 	new_user_session_path
+	# end
 
 
 end
