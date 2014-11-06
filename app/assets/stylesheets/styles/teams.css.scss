@@ -1,0 +1,370 @@
+//teams controller
+@import "base/colors";
+@import "base/typography";
+@import "base/mixins";
+
+.anchor {
+	height: 0px;
+	line-height: 0px;
+	position: absolute;
+}
+
+.anchor-top {
+	@extend .anchor;
+}
+
+.anchor-bottom {
+	@extend .anchor;
+}
+
+p.first-person {
+	text-transform: italic;
+}
+
+
+#content-1 {
+
+	header {
+		margin-bottom: 15px;
+	}
+
+	p {
+		color: $white;
+	}
+
+	#select-distance {
+		height: 100%;
+		width: 100%;
+		float: left;
+		padding: 0 0 15px 0;
+		display: block;
+
+		input#user_distance {
+			-webkit-appearance: none;
+
+			cursor: pointer;
+			width: 100%;
+			background: transparent;
+		}
+
+		output#user_distance_value {
+			-webkit-appearance: none;
+			display: inline-block;
+			width: 50px;
+			margin: 0 2.5px;
+			text-align: center;
+
+			span {
+				width: 25px;
+			}
+		}
+
+		input[type=range]::-webkit-slider-runnable-track {
+			border-radius: 10px;
+
+			background: $black-50;
+			@include shadow(0px, 0px, 5px, 0px, $steel);
+
+		}
+
+		input[type=range]::-webkit-slider-thumb {
+			-webkit-appearance: none;
+
+			height: 20px;
+			width: 20px;
+			border: 1px solid $steel;
+			border-radius: 10px;
+
+			background: lightgoldenrodyellow;
+			@include shadow(1px, 1px, 1px, 0px, $black-50);
+		}
+
+		input[type=range]:focus {
+			outline: none;
+		}
+
+		input[type=range]:focus::-webkit-slider-runnable-track {
+			-webkit-appearance: none;
+		}
+	}
+
+	.select-local-team {
+		height: 100%;
+		padding: 2.5px;
+		background-repeat: no-repeat;
+
+		form {
+			width: auto;
+
+			.local-team {
+				height: 200px;
+				width: 100%;
+				padding: 15px;
+
+				display: none;
+				position: relative;
+				float: left;
+
+				color: $white;
+				background: $black-10;
+
+				//left
+				.team-info {
+					height: 100%;
+					padding: 0;
+					float: left;
+
+					.team-name {color: lightgoldenrodyellow;}
+
+					.team-distance {
+						font-size: 200%;
+					}
+				}
+
+				//right
+
+				input {
+					height: 100%;
+					width: 100%;
+					display: inline-block;
+					background: transparent;
+					border: 0;
+					text-indent: -9999px;
+					cursor: pointer;
+
+				}
+
+				.team-league {
+					//					display: inline-block
+					height: 50px;
+					width: 50px;
+					position: absolute;
+					right: 0px;
+					bottom: 0px;
+
+					@include flag-upper-left(25px, transparent);
+					color: $white;
+					font-size: 75%;
+				}
+
+				.team-logo-button {
+					height: 100%;
+					padding: 5px;
+					//					background: $aqua-15;
+					background-position: center;
+					background-repeat: no-repeat;
+
+					@include grayscale(75%);
+
+					&:hover {
+						background-position: center;
+						background-repeat: no-repeat;
+
+						@include grayscale(0%);
+
+					}
+
+					.team-logo {
+						display: none;
+						text-align: center;
+
+					}
+
+				}
+
+			}
+
+		}
+
+		&.primary {
+			width: 100%;
+			background-size: 90%;
+
+			form {
+				.local-team {
+
+					.team-info {width: 65%;}
+
+					.team-logo-button {
+						width: 35%;
+						background: 0;
+						background-repeat: no-repeat;
+						background-position: center center;
+
+
+						@include grayscale(0%);
+
+						input {
+							background-repeat: no-repeat;
+
+						}
+
+					}
+
+				}
+			}
+			h4 {
+				font-size: 3em
+			}
+		}
+
+		&.secondary {
+
+			&:hover {
+
+			}
+
+			form {
+				.local-team {
+					height: 180px;
+
+					.team-info {
+					}
+					.team-logo-button {
+
+						background-size: 90%;
+
+					}
+
+				}
+			}
+			input {
+				width: 100%;
+				//        padding: 25px;
+			}
+		}
+
+	}
+
+}
+
+#content-2 {
+
+	header {
+		margin-bottom: 15px;
+	}
+
+	p {
+		color: $white;
+	}
+
+	//any teams
+	#js-select-any-team {
+
+		height: auto;
+		overflow: none;
+
+		//page tabs
+		.tab-control {
+			height: auto;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			display: block;
+			background: none;
+			top: 0;
+			position: absolute;
+
+			li.tab-pager {
+
+				font-size: 1.25em;
+				color: $aqua;
+				line-height: 100%;
+				width: auto;
+				display: inline-block;
+				margin: 0;
+				padding: 10px;
+				background: $black-50;
+
+				&.active-tab-pager {
+					background: $black-25;
+					color: $white;
+				}
+
+			}
+
+		}
+
+		//pages
+		.tab-panel {
+			height: auto;
+			min-height: 400px;
+			width: 100%;
+			margin-top: 40px;
+			background: $black-50;
+			color: $yellow;
+			padding: 0;
+			text-align: center;
+			float: left;
+
+			&.active-tab-panel {
+				background: $black-10;
+			}
+
+			p {
+				text-align: left;
+
+			}
+
+			p:only-child {
+				margin: 20px;
+			}
+
+			//team container
+			.any-team {
+				padding: 15px;
+				@include grayscale(75%);
+
+				&:hover {
+
+					background: $aqua-15;
+					@include grayscale(0%);
+
+					cursor: pointer;
+
+				}
+
+				.shell {
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+					border: none;
+				}
+
+				input {
+					height: 125px;
+					border: none;
+					background: transparent;
+					display: inline-block;
+					width: 100%;
+					text-indent: -9999em;
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.league-mls {
+	@include flag-lower-right(25px, $color-mls)
+}
+
+.league-nasl {
+	@include flag-lower-right(25px, $color-nasl)
+}
+
+.league-usl-pro {
+	@include flag-lower-right(25px, $color-usl-pro)
+}
+
+.league-usl-pdl {
+	@include flag-lower-right(25px, $color-usl-pdl)
+}
+
+//
+//#js-select-any-team .tab-panel { display: none }
+//#js-select-any-team .tab-panel.first { display: block }

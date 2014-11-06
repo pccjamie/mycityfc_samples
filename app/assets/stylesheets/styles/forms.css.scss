@@ -1,0 +1,79 @@
+
+/**** FORMS ****/
+form {
+  background: 0;
+  height: auto;
+  margin: 0 auto;
+}
+
+form.edit_user {
+
+  background: $black-25;
+  height: auto;
+
+  table * td {
+    color: $white;
+    font-size: 20px;
+    img {
+      border: 1px solid $steel
+    }
+  }
+
+  .field-group {
+
+    height: auto;
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+
+    * {
+      display: inline-block;
+      line-height: normal;
+      color: $white;
+      font-size: 20px;
+      font-family: $font-normal
+    }
+
+    .button {
+      color: $gray;
+      border-radius: 7px;
+      -webkit-border-radius: 7px;
+    }
+    label.profile-field {
+      width:  100%;
+      float: left;
+    }
+    select {
+      width: auto;
+      color: $gray
+    }
+
+  }
+
+  .actions {
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid $steel;
+  }
+
+}
+
+form.devise {
+  background: $white-50
+}
+
+form * input.button {
+  margin: 0 0 20px 0
+}
+
+form * .button {
+  font-weight: normal;
+  color: $gray;
+  border: 0;
+  position: relative;
+}
+
+form * .button:hover {
+  color: $gray
+}
