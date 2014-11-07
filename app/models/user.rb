@@ -17,13 +17,20 @@ class User < ActiveRecord::Base
 
 			# pulling in min info for now
 					user.email = auth.info.email
-					user.password = Devise.friendly_token[0,20]
 					user.name = auth.info.name
-					user.first_name = auth.info[:first_name]
-					user.location = auth.info[:location]
+					#user.first_name = auth.info[:first_name]
+					#user.location = auth.info[:location]
+
+
+					user.first_name = auth.info.first_name
 					user.location = auth.info.location
 
+
 					user.picture = auth.info.image
+
+
+
+					user.password = Devise.friendly_token[0,20]
 
 			# u.name = auth.extra.raw_info.name
 			# u.first_name = auth.info[:first_name]
