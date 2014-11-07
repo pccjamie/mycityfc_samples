@@ -1,0 +1,34 @@
+<div id="js-select-any-team"
+		 class="js-tabs"
+		 data-cycle-slides=">.tab-panel"
+		 data-cycle-pager='>.tab-control'
+		 data-cycle-pager-template=""
+		 data-cycle-timeout="0"
+		 data-cycle-pager-event="mouseover"
+		 data-cycle-pager-active-class="active-tab-pager"
+		 data-cycle-slide-active-class="active-tab-panel"
+		 data-cycle-hide-non-active=true>
+
+	<ul class="tab-control">
+		<li class="tab-pager">MAJOR LEAGUE SOCCER</li>
+		<li class="tab-pager">NASL</li>
+		<li class="tab-pager">USL PRO</li>
+	</ul>
+
+
+	<div class="tab-panel first">
+		<%= render 'partials/select_mls_team' %>
+	</div>
+	<div class="tab-panel">
+		<%= render 'partials/select_nasl_team' %>
+
+	</div>
+	<div class="tab-panel">
+		<%#= render 'partials/select_any_team' %>
+		<p>USL Pro - Coming soon</p>
+	</div>
+
+</div>
+
+
+

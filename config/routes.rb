@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 	# AUTO GENERATED WITH CONTROLLER / VIEW
-	# get 'static_pages/landing'
+	get 'dashboard/index'
 
 
 	# generating User model via Devise adds this default route

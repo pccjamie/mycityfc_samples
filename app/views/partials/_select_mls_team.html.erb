@@ -1,0 +1,26 @@
+<%= notice_content_pending %>
+
+<div id="select-any-team">
+
+	<% @teams.each do |t| %>
+
+		<% if t.league == 'MLS' %>
+
+		<div class="any-team small-3 columns end">
+			<%= form_for(resource,
+									 :as   => resource_name,
+									 :url  => registration_path(resource_name),
+									 :html => { :method => :put }) do |f| %>
+				<%= devise_error_messages! %>
+
+				<div class="shell" style="background-image: url(<%= t.logo %>)">
+					<%= f.text_field :primary_team, :value => t.name, :type => :submit  %>
+				</div>
+
+			<% end %>
+
+		</div>
+	<% end %>
+	<% end %>
+
+</div>

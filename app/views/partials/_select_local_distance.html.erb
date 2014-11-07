@@ -1,0 +1,57 @@
+<div id="select-distance">
+	<h3 class="small-9 columns">
+		Teams within
+		<output class="data" id="user_distance_value"><span></span></output>
+		miles of
+		<output class="data"><%= current_user.city %></output>
+						<span class="has-tip" data-tooltip aria-haspopup="true"
+									title="Tiles display closest team based on a distance the user has chosen.
+							The closest team is styled differently. TODO - add AJAX support so page isn't reloaded each time the user changes the distance">
+					?
+				</span>
+	</h3>
+
+	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+		<%= devise_error_messages! %>
+		<!--<div class="small-3 columns">-->
+		<!--<%#= f.label :distance, 'Search Distance:', :class => 'profile-field form-title' %>-->
+		<!--</div>-->
+		<h3 class="small-3 columns">
+
+			<% if user_signed_in? %> <!--&& (current_user.profile || current_user.primary_team) == nil-->
+
+
+				<%= f.range_field :distance, in: 0.0..1360.0,
+													:value         => @travel_distance,
+													:step          => 'all',
+													:list          => 'distance-settings'
+				%>
+				<!--<output for=user_distance id=volume><span id="user_distance_ctr"></span></output>-->
+				<datalist id=distance-settings>
+					<option>10</option>
+					<option>20</option>
+					<option>30</option>
+					<option>40</option>
+					<option>50</option>
+					<option>60</option>
+					<option>70</option>
+					<option>80</option>
+					<option>90</option>
+					<option>100</option>
+
+				</datalist>
+				</h3>
+				<!--<div class="field-group actions">-->
+				<!--<%= f.submit "Save", :class => 'button' %>-->
+				<!--<%= link_to "Cancel", main_index_path, :class => 'button' %>-->
+				<!--</div>-->
+
+			<% end %>
+	<% end %>
+
+	<p class="notice"><%= notice_geo %></p>
+
+</div>
+
+
+

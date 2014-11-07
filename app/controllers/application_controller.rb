@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 	# Devise helpers
 
 	def after_sign_in_path_for(user)
-		root_path
+		dashboard_index_path
 	end
 
 

@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 	def self.add_info_from_omniauth(auth) #called by User::OmniauthCallbacksController
 
 		# find existing or create new
-		where(provider: auth.provider, uid: auth.uid).first_or_create do |u|
+		where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
 
 			#	none found so create a new one based on hash of FB info.
 			# SCHEMA - https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema

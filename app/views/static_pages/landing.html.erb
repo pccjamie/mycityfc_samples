@@ -1,1 +1,173 @@
-Landing page. Temporary root. Change User:OmniAuthCallBacksController to redirect to dashboard_index_path if authenticated, once that view is built.
+<!--Landing page. Temporary root. Change User:OmniAuthCallBacksController to redirect to dashboard_index_path if authenticated, once that view is built.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title><%= content_for?(:title) ? yield(:title) : "MYCITYFC.COM" %></title>
+	<%= stylesheet_link_tag "application" %>
+	<%= javascript_include_tag "vendor/modernizr" %>
+	<%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=BenchNine|Pathway+Gothic+One|Numans|Carrois+Gothic+SC|Inconsolata' %>
+	<%= csrf_meta_tags %>
+</head>
+<body id="landing">
+
+<!--<div id="nav-wrap">-->
+<!--<!--<div id="nav-secondary" class="row">-->-->
+
+<!--<!--<ul class="small-12 columns">-->-->
+<!--<!--<li class="small-10 columns left">Soccer is Fun</li>-->-->
+<!--<!--<li class="small-1 columns left">Login:</li>-->-->
+
+<!--<!--</li>-->-->
+<!--<!--</ul>-->-->
+
+<!--<!--</div>-->-->
+<!--</div>-->
+<!-- fixed -->
+
+<!--<div id="toggle-views">-->
+<!--<span id="view-tips">BETA</span>-->
+<!--</div>-->
+
+<!--<div class="row">-->
+<!--<p class="notice"><%= notice %></p>-->
+<!--<p class="alert"><%= alert %></p>-->
+<!--</div>-->
+<a class="anchor-top" name="intro"></a>
+
+<div class="parallax-background">
+	<div id="nav-wrap">
+		<ul class="row">
+			<%#= link_to image_tag('https://www.facebookbrand.com/img/assets/asset.facebook.logo.lg
+			.png'), user_omniauth_authorize_path(:facebook) %>
+			<li class="right"><%= link_to image_tag('fb.png'), user_omniauth_authorize_path(:facebook) %>
+
+			</li>
+		</ul>
+	</div>
+
+	<div class="intro-text row">
+
+		<!--<header id="logo" class="row">MYCITYFC</header>-->
+
+		<nav id="nav-landing" class="row">
+
+			<div class="small-12 columns">
+				<ul class="">
+					<li class="small-12 columns">
+						<h3>DID YOU KNOW...</h3>
+
+						<p class="factoid small-4 columns left">
+							USMNT World Cup keeper Tim Howard began his pro career in 2001 with the now
+							defunct third division New Jersey Imperials.
+
+							Now, he starts for Everton FC in the Premier League and stars for the US
+							Men's National Team.</p>
+
+					</li>
+
+					<li class="small-12 columns">
+						<h1 class="site-name"><%= link_to 'MYCITYFC', root_path %></h1>
+					</li>
+
+					<li>
+						<p class="site-tagline">Tell us where you are. We tell you what teams are nearby.<br/> Maybe you'll find the next
+							Tim Howard?
+						</p>
+					</li>
+
+				</ul>
+
+				<!--<ul>-->
+
+				<!--<li class="small-12 columns">Videos</li>-->
+				<!--<li class="small-12 columns">Schedule</li>-->
+				<!--<li class="small-12 columns">Results</li>-->
+
+				<!--</ul>-->
+
+			</div>
+
+		</nav>
+
+		<div id="intro-options">
+
+			<a href="#" class="small-4 columns link-to">TAKE A TOUR</a>
+			<a href="#login" class="small-12 columns jump link-to">Login</a>
+
+		</div>
+		<!--<p><i class="fi-arrow-down row">More</i></p>-->
+
+	</div>
+
+</div>
+
+<div class="parallax-content">
+
+	<section id="login" class="row">
+
+		<a class="anchor-bottom" name="login"></a>
+
+		<div id="registered" class="small-8 columns">
+
+			<div class="small-6 columns">
+
+				<h5>Sign in with Facebook
+				<span class="has-tip-2"
+							data-tooltip
+							aria-haspopup="true"
+							title="Requires that your city be saved in your Facebook profile.">?
+					</span>
+				</h5>
+				<hr>
+				<%#= link_to image_tag('https://www.facebookbrand.com/img/assets/asset.facebook.logo.lg.png'),
+				user_omniauth_authorize_path(:facebook) %>
+				<%= link_to image_tag('fb.png'), user_omniauth_authorize_path(:facebook) %>
+			</div>
+
+			<div class="small-6 columns">
+
+				<h5>or, Sign Up Here</h5>
+
+				<form>
+					<input type="email" placeholder="email">
+					<input type="text" placeholder="city"/>
+					<input type="text" placeholder="state"/>
+					<input class="tiny button" type="reset" disabled>
+					<input class="tiny button" type="submit" disabled>
+				</form>
+
+			</div>
+
+		</div>
+
+		<div id="not-registered" class="small-4 columns">
+
+			<div class="small-12 columns">
+				<a>or just take a tour!</a>
+
+				<p>All site features reliant on your location will be disabled (which, sadly, will be most things!)</p>
+				<hr>
+				<button class="tiny button" disabled>Take a Tour</button>
+			</div>
+
+		</div>
+
+		<!--<a href="#intro" class="small-12 columns jump"><span class="tiny button">Less</span></a>-->
+
+	</section>
+
+	<hr>
+	<h1 class="row">MYCITYFC.COM &copy;2013-2014</h1>
+</div>
+
+<!-- page content -->
+<%#= yield %>
+
+</body>
+
+<%= javascript_include_tag "application" %>
+
+</html>

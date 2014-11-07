@@ -1,0 +1,84 @@
+<section id="js-game-results-section">
+
+	<h3 class="section-title extra-padding">
+		Results
+		<span class="has-tip" data-tooltip aria-haspopup="true" title="Filter results by competition type">?</span>
+	</h3>
+
+	<ul class="competitions">
+
+		<li class="type-all">ALL</li>
+		<li class="type-mls-reg ">LEAGUE</li>
+		<li class="type-mls-cup">MLS CUP</li>
+		<li class="type-ccl ">CCL</li>
+		<li class="type-natl-us">OPEN CUP</li>
+
+	</ul>
+
+	<div id="js-game-results" class="scrollMe">
+		<div class="scrollbar">
+			<div class="track">
+				<div class="thumb">
+					<div class="end"></div>
+				</div>
+			</div>
+		</div>
+		<div class="viewport">
+			<div class="overview">
+
+				<!--<h6>User choice: <%#= @my_choice %>  </h6>-->
+				<!--<h6>Matches to MLS ID: <%#= @club_id %></h6>-->
+
+				<div class="clearfix"></div>
+				<% @schedule.each do |game| %>
+					<div class="js-single-game small-12 columns">
+						<div class="game-date ">
+							<%= game.parent.parent.previous_element.text %>
+						</div>
+						<div class="game-time">
+							<%= game.css('.field-game-date-start-time').text %>
+						</div>
+
+						<div class="home-team"><%= game.css('.field-home-team').text %></div>
+						<%= raw game.css('.field-home-team-logo') %>
+						<span class="separator">vs</span>
+
+						<div class="game-score"><%= game.css('.field-score').text %></div>
+						<%= raw game.css('.field-away-team-logo') %>
+
+						<div class="away-team"><%= game.css('.field-away-team').text %></div>
+
+						<div class="game-competition"><%= game.css('span.competetion'||'span.competition').text %></div>
+
+						<div class="game-links">
+
+							<div class="row">
+								<div class="small-9 columns">
+									<%= raw game.css('.field-broadcast-partners') %>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="small-9 columns">
+									<%== game.css('.sch_tickets') %>
+								</div>
+							</div>
+
+							<!--<div class="row">-->
+							<!--<div class="small-12 columns field-other-links">-->
+							<!--<%== game.css('.sch_tickets') %>-->
+							<!--<%== game.css('.sch_matchcenter') %>-->
+							<!--</div>-->
+							<!--</div>-->
+
+
+						</div>
+
+					</div>
+				<% end %>
+
+			</div>
+		</div>
+	</div>
+</section>
+

@@ -1,0 +1,14 @@
+<nav id="nav-primary" class="row">
+
+	<ul class="branding small-12 medium-7 columns">
+		<li class="logo"><%= link_to 'MYCITYFC', root_path %></li>
+	</ul>
+
+	<ul class="small-12 medium-5 columns">
+		<!--<li class="small-6 columns"><#%= link_to current_user.primary_team, main_index_path %></li>-->
+		<li class="small-6 columns"><%= link_to  current_user.primary_team, main_index_path %></li>
+
+		<li class="small-6 columns"><%= link_to 'Find a Team', teams_index_path %></li>
+	</ul>
+
+</nav>

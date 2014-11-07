@@ -1,0 +1,22 @@
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name))   do |f| %>
+
+    <%= devise_error_messages! %>
+    <% if user_signed_in? %> <!--&& (current_user.profile || current_user.primary_team) == nil-->
+
+
+        <div class="field-group">
+          <div class="small-6 columns small-centered">
+            <%= f.label :distance, 'Display Teams Near Me', :class => 'profile-field' %>
+            <%= f.range_field :distance, in: 1.0..1000.0, :step => 1 %>
+            <span id="user_distance_ctr"></span>
+          </div>
+        </div>
+
+        <div class="field-group actions">
+          <%= f.submit "Save", :class => 'button' %>
+          <%= link_to "Cancel", main_index_path, :class => 'button' %>
+        </div>
+
+
+    <% end %>
+<% end %>

@@ -1,0 +1,32 @@
+<div id="nav-wrap">
+<div id="nav-secondary" class="row">
+
+	<ul class="small-12 medium-7 columns">
+		<li class="small-12 columns"><span>Soccer is Fun</span></li>
+		<!--<li class="notice"><span><%#= notice || alert %></span></li>-->
+	</ul>
+
+	<ul id="admin-menu" class="small-12 medium-5 columns">
+		<li class="small-10 columns">
+			<span class="data">You're in <%=current_user.city %>!</span>
+		</li>
+		<li class="small-2 columns dropdown">
+			<a href="#" data-dropdown="hover1" data-options="is_hover:true"><%= image_tag current_user.picture%></a>
+		</li>
+	</ul>
+
+</div>
+
+<!--out of flow. dropdown options-->
+<ul id="hover1" class="f-dropdown" data-dropdown-content>
+
+	<li><a href="#">About MYCITYFC</a></li>
+	<li>
+		<%= link_to edit_user_registration_path, :class => 'has-image link-to-admin ' do %>
+			<!--<span><%#= current_user.first_name %></span>-->
+			Settings
+		<% end %>
+	</li>
+	<li><%= link_to('Logout', destroy_user_session_path, :method => :delete,:class=> 'link-to-admin') %></li>
+</ul>
+</div>

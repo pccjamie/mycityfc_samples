@@ -1,0 +1,39 @@
+<% @local_teams.each do |t| %>
+
+	<div class="small-6 columns select-local-team">
+
+		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+
+			<%= devise_error_messages! %>
+
+			<% if user_signed_in? %> <!--&& (current_user.profile || current_user.primary_team) == nil-->
+
+				<div class="local-team">
+
+					<div class="team-info small-6 columns">
+						<h4 class="data team-name"><%= t.name %></h4>
+						<h5 class="data team-venue"><%= t.venue %></h5>
+						<h5 class="data team-city"><%= t.city %>,<%= t.state %></h5>
+						<h5 class="data team-distance"><%= t.distance_to(current_user.city).round(1) %> miles</h5>
+					</div>
+
+					<div class="team-logo-button small-6 columns">
+						<div class="data team-logo"><%= t.logo %></div>
+						<%= f.text_field :primary_team, :value => t.name, :type => :submit %>
+					</div>
+
+					<!-- positioned-->
+					<h5 class="data team-league"><%= t.league %></h5>
+
+				</div>
+
+				</div>
+
+			<% end %>
+
+		<% end %>
+
+<% end %>
+
+
+
