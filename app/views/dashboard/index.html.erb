@@ -4,19 +4,6 @@
 <!-- temp logout link so callback flow is verified-->
 <div class="row">
 	authenticated. display aggregated content (unless no prefs yet)....
-	<%#= link_to('Logout', destroy_user_session_path, :method => :delete,:class=> 'link-to-admin') %>
-
-	<% if user_signed_in? %>
-	<li>
-		<%= link_to('Logout', sign_out, :method => :delete) %>
-	</li>
-	<% else %>
-	<li>
-		<%= link_to('Login', new_user_session_path)  %> OR FB
-	</li>
-	<% end %>
-
-
-
+	<%= link_to('Logout', destroy_user_session_path, :method => :delete,:class=> 'link-to-admin') %>
 </div>
 

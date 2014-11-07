@@ -33,9 +33,12 @@ Rails.application.routes.draw do
 	# 	get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
 	# end
 
-	# # devise_scope :user do
-	# 		get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-	# # end
+	# devise_scope :user do
+	# 	# if ONLY using omniauth, add a sign_in route (or use root)
+	# 	get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
+	# 	# required
+	# 	get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+	# end
 
 
 	devise_for :users,
