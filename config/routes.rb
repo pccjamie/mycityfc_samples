@@ -3,36 +3,28 @@ Rails.application.routes.draw do
 	# AUTO GENERATED WITH CONTROLLER / VIEW
 	get 'dashboard/index'
 
-
-	# generating User model via Devise adds this default route
-	# devise_for :users
-
 =begin
+- Desc:
+	Installing gem omniauth-facebook and enabling omniauthable in User model provided two new paths
 
-1.Installing gem omniauth-facebook and enabling omniauthable in User model provided two new paths
+	- user_omniauth_authorize_path(provider)
+	- user_omniauth_callback_path(provider)
 
-	user_omniauth_authorize_path(provider)
-	user_omniauth_callback_path(provider)
-
-2.Use first path in view. Clicking sends user to FB to see permissions and approve.
+- Usage:
 	<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
 
-3.Approval redirects user to the related callback method defined in
-	User::OmniauthCallbacksController
-
+- Result:
+	Redirects user to :facebook, defined in User::OmniauthCallbacksController (inherits from Devise default)
 =end
-
-	# SO we need to change devise_for :users by specifying which controller should NOW be used instead of the default controller for handling the callback process (since that is where we defined the facebook method)
-
 
 
 	devise_for :users,
 						 :controllers => {
 							 :omniauth_callbacks => "users/omniauth_callbacks" # User::OmniauthCallbacksController
 						 },
-						 :path_names => {
-							 	sign_in: 'devise/sessions#new', #:as => :new_user_session,
-								sign_out: 'devise/sessions#destroy' #:as => :destroy_user_session
+						 :path_names  => {
+							 sign_in:  'devise/sessions#new', #:as => :new_user_session,
+							 sign_out: 'devise/sessions#destroy' #:as => :destroy_user_session
 						 }
 
 	# Route sign out to Devise default session ctrl destroy method
@@ -43,7 +35,6 @@ Rails.application.routes.draw do
 	# 	# required
 	# 	get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
 	# end
-
 
 
 	# ROOT
