@@ -51,6 +51,7 @@ Rails.application.routes.draw do
 	root 'static_pages#landing'
 
 	#with auth
-	#pending
-
+	authenticated do
+		root :to => 'dashboard#index', :as => :authenticated
+	end
 end
