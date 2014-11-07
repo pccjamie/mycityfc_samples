@@ -3,7 +3,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
 
 	def facebook
-		# raise request.env["omniauth.auth"].to_yaml
+		raise request.env["omniauth.auth"].to_yaml
+
 		@user = User.add_info_from_omniauth(request.env["omniauth.auth"])
 
 		# User model validates save. If validation failed, we wouldn't know.

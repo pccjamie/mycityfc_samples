@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" line="16" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" line="18" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa39e5d5-1e35-42b4-b428-8eff8016cc5d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
     </list>
     <ignored path="mycityfc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,13 +82,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="registrations_controller.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="registrations_controller.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/users/registrations_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.18032786" vertical-offset="0" max-vertical-offset="915">
-                  <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+                <state vertical-scroll-proportion="0.16393442" vertical-offset="0" max-vertical-offset="915">
+                  <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
                   <folding>
-                    <element signature="e#679#741#0" expanded="true" />
+                    <element signature="e#448#503#0" expanded="true" />
+                    <element signature="e#681#743#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -96,9 +98,11 @@
           <file leaf-file-name="omniauth_callbacks_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-                  <caret line="21" column="88" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
-                  <folding />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+                  <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+                  <folding>
+                    <element signature="e#126#1007#2" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -166,11 +170,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="user.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/models/user.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.35900104" vertical-offset="0" max-vertical-offset="961">
-                  <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+                <state vertical-scroll-proportion="0.32778355" vertical-offset="0" max-vertical-offset="961">
+                  <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -228,7 +232,6 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/styles/static_pages.css.scss" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/dashboard/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
@@ -237,11 +240,12 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/landing.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dashboard.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/landing.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
       </list>
     </option>
   </component>
@@ -1166,30 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35900104" vertical-offset="0" max-vertical-offset="961">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <caret line="21" column="88" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
@@ -1198,13 +1178,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding>
+            <element signature="e#126#1007#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users/registrations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18032786" vertical-offset="0" max-vertical-offset="915">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.16393442" vertical-offset="0" max-vertical-offset="915">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#679#741#0" expanded="true" />
+            <element signature="e#448#503#0" expanded="true" />
+            <element signature="e#681#743#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32778355" vertical-offset="0" max-vertical-offset="961">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

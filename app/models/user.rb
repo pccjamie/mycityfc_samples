@@ -21,6 +21,8 @@ class User < ActiveRecord::Base
 					user.name = auth.info.name
 					user.first_name = auth.info[:first_name]
 					user.location = auth.info[:location]
+					user.location = auth.info.location
+
 					user.picture = auth.info.image
 
 			# u.name = auth.extra.raw_info.name

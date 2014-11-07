@@ -6,6 +6,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
 	private
 
 	# TODO - turn this on once I add db authentication. Right now, only using Omniauth-facebook, which does not allow signing up and specifying your own params during the acct creation process.
+
+
 	def sign_up_params
 		params.require(:user).permit!
 	end
