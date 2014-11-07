@@ -2,12 +2,14 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 gem 'rails', '4.1.2'
+gem 'rails_12factor', group: :production
 
-# gem 'pg', '~> 0.17.1' #careful when changing this...
-gem 'pg'
+# db
+gem 'pg' #, '~> 0.17.1' #careful when changing this...
 
-# SCSS
-gem 'sass-rails', '~> 4.0.3'
+# scss
+gem 'sass-rails', '~> 4.0.3' # scss
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -42,8 +44,6 @@ gem 'omniauth-facebook'
 
 # Foundation
 gem 'foundation-rails', group: [:development, :production]
-
-gem 'rails_12factor', group: :production
 
 gem 'geocoder' #geocoding
 gem 'chronic' #natural language time formatter

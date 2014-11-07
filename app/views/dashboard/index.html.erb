@@ -1,6 +1,6 @@
 <!-- aggregates all content for the user's preferred team -->
 <!-- temp logout link so callback flow is verified-->
-<div class="row">
+<div class="row" data-no-turbolink>
 	authenticated. display aggregated content (unless no prefs yet)....
 	<%= link_to('Logout', destroy_user_session_path, :method => :delete, :class=> 'link-to-admin') %>
 </div>
