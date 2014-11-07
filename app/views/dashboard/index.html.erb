@@ -1,3 +1,9 @@
-<!-- aggregates all -->
+<!-- aggregates all content for the user's preferred team -->
 
-authecticated. showing dash (unless no prefs yet)....
+
+<!-- temp logout link so callback flow is verified-->
+<div class="row">
+	authenticated. display aggregated content (unless no prefs yet)....
+	<%= link_to('Logout', destroy_user_session_path, :method => :delete,:class=> 'link-to-admin') %>
+</div>
+

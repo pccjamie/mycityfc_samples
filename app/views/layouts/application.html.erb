@@ -1,14 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Mycityfc</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title><%= content_for?(:title) ? yield(:title) : "MYCITYFC.COM" %></title>
+	<%#= stylesheet_link_tag "application" %>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%#= javascript_include_tag "vendor/modernizr" %>
+	<%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=BenchNine|Pathway+Gothic+One|Numans|Carrois+Gothic+SC|Inconsolata' %>
+
+	<%= csrf_meta_tags %>
+
 </head>
 <body>
 
+<!-- fixed -->
+<div id="toggle-views">
+	<span id="view-tips">BETA</span>
+</div>
+
+<!--<div class="row">-->
+<!--<p class="notice"><%= notice %></p>-->
+<!--<p class="alert"><%= alert %></p>-->
+<!--</div>-->
+
+<!-- nav -->
+<%#= render 'partials/nav_utility' %>
+<%#= render 'partials/nav_main' %>
+
+<!-- page content -->
 <%= yield %>
 
+<!-- footer -->
+<%= render 'partials/footer' %>
+
 </body>
+
+<%= javascript_include_tag "application" %>
+
 </html>
