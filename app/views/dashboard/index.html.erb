@@ -6,7 +6,7 @@
 	authenticated. display aggregated content (unless no prefs yet)....
 	<%#= link_to('Logout', destroy_user_session_path, :method => :delete,:class=> 'link-to-admin') %>
 
-	% if user_signed_in? %>
+	<% if user_signed_in? %>
 	<li>
 		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
 	</li>
