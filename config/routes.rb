@@ -20,7 +20,8 @@ Rails.application.routes.draw do
 
 	devise_for :users,
 						 :controllers => {
-							 :omniauth_callbacks => "users/omniauth_callbacks" # User::OmniauthCallbacksController
+							 :omniauth_callbacks => "users/omniauth_callbacks",
+							 :registrations => "users/registrations"
 						 },
 						 :path_names  => {
 							 sign_in:  'devise/sessions#new', #:as => :new_user_session,
