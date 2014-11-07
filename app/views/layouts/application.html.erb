@@ -6,11 +6,7 @@
 	<title><%= content_for?(:title) ? yield(:title) : "MYCITYFC.COM" %></title>
 	<%#= stylesheet_link_tag "application" %>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-
-
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%#= javascript_include_tag "vendor/modernizr" %>
-	<%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=BenchNine|Pathway+Gothic+One|Numans|Carrois+Gothic+SC|Inconsolata' %>
 
 	<%= csrf_meta_tags %>
 
@@ -39,6 +35,6 @@
 
 </body>
 
-<%= javascript_include_tag "application" %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 </html>

@@ -1,45 +1,16 @@
-<!--Landing page. Temporary root. Change User:OmniAuthCallBacksController to redirect to dashboard_index_path if authenticated, once that view is built.-->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title><%= content_for?(:title) ? yield(:title) : "MYCITYFC.COM" %></title>
-	<%= stylesheet_link_tag "application" %>
-	<%= javascript_include_tag "vendor/modernizr" %>
-	<%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=BenchNine|Pathway+Gothic+One|Numans|Carrois+Gothic+SC|Inconsolata' %>
-	<%= csrf_meta_tags %>
-</head>
-<body id="landing">
-
-<!--<div id="nav-wrap">-->
-<!--<div id="nav-secondary" class="row">-->
-
-<!--<ul class="small-12 columns">-->
-<!--<li class="small-10 columns left">Soccer is Fun</li> -->
-<!--<li class="small-1 columns left">Login:</li> -->
-
-<!--</li>-->
-<!--</ul>-->
-
-<!--</div>-->
-<!--</div>-->
-
-<!-- fixed -->
-<!--<div id="toggle-views">-->
-<!--<span id="view-tips">BETA</span>-->
-<!--</div>-->
-
 <!--<div class="row">-->
 <!--<p class="notice"><%= notice %></p>-->
 <!--<p class="alert"><%= alert %></p>-->
 <!--</div>-->
+
 <a class="anchor-top" name="intro"></a>
 
 <div class="parallax-background">
+	Landing page. Temporary root. Change User:OmniAuthCallBacksController to redirect to dashboard_index_path if authenticated, once that view is built.
+
 	<div id="nav-wrap">
 		<ul class="row">
+
 			<%#= link_to image_tag('https://www.facebookbrand.com/img/assets/asset.facebook.logo.lg
 			.png'), user_omniauth_authorize_path(:facebook) %>
 			<li class="right"><%= link_to image_tag('fb.png'), user_omniauth_authorize_path(:facebook) %>
@@ -162,12 +133,3 @@
 	<hr>
 	<h1 class="row">MYCITYFC.COM &copy;2013-2014</h1>
 </div>
-
-<!-- page content -->
-<%#= yield %>
-
-</body>
-
-<%= javascript_include_tag "application" %>
-
-</html>

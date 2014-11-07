@@ -25,21 +25,6 @@ Rails.application.routes.draw do
 	# SO we need to change devise_for :users by specifying which controller should NOW be used instead of the default controller for handling the callback process (since that is where we defined the facebook method)
 
 
-	# Route sign out to Devise default session ctrl destroy method
-	# devise_scope :user do
-	# 	# if ONLY using omniauth, add a sign_in route (or use root)
-	# 	get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
-	# 	# required
-	# 	get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-	# end
-
-	# devise_scope :user do
-	# 	# if ONLY using omniauth, add a sign_in route (or use root)
-	# 	get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
-	# 	# required
-	# 	get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-	# end
-
 
 	devise_for :users,
 						 :controllers => {
@@ -49,6 +34,16 @@ Rails.application.routes.draw do
 							 	sign_in: 'devise/sessions#new', #:as => :new_user_session,
 								sign_out: 'devise/sessions#destroy' #:as => :destroy_user_session
 						 }
+
+	# Route sign out to Devise default session ctrl destroy method
+
+	# devise_scope :user do
+	# 	# if ONLY using omniauth, add a sign_in route (or use root)
+	# 	get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
+	# 	# required
+	# 	get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+	# end
+
 
 
 	# ROOT

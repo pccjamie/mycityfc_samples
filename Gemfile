@@ -43,7 +43,7 @@ gem 'omniauth-facebook'
 # Foundation
 gem 'foundation-rails', group: [:development, :production]
 
-
+gem 'rails_12factor', group: :production
 
 gem 'geocoder' #geocoding
 gem 'chronic' #natural language time formatter

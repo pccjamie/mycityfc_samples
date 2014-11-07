@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def after_sign_out_path_for(user)
-		static_pages_index_path
+		root_path
 	end
 
 
