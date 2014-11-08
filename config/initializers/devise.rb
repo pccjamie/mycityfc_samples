@@ -236,7 +236,7 @@ Devise.setup do |config|
 
 
 	# TODO - Add scope
-	config.omniauth :facebook, ENV["facebook_app_id"], ENV["facebook_app_secret"]
+	config.omniauth :facebook, ENV["facebook_app_id"], ENV["facebook_app_secret"], :scope => 'email,user_location,read_stream', :display => 'popup'
 
 	# TODO - determine whether to convert prev to THIS format and handle accordingly
 	#Devise.facebook_app_id = ENV["facebook_app_id"]

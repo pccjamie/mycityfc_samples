@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 
-	# before_action :configure_permitted_parameters, if: :devise_controller?
+	before_action :configure_permitted_parameters, if: :devise_controller?
 
 
 
@@ -33,11 +33,14 @@ class ApplicationController < ActionController::Base
 
 
 	#
-	# protected
-	#
-	# def configure_permitted_parameters
-	# 	devise_parameter_sanitizer.for(:sign_in, :account_update, :sign_up) << :location
-	# end
+	protected
+
+	def configure_permitted_parameters
+		devise_parameter_sanitizer.for(:sign_in) << :location
+		devise_parameter_sanitizer.for(:sign_up) << :location
+		devise_parameter_sanitizer.for(:account_update) << :location
+
+	end
 
 
 end

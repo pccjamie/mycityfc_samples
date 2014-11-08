@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
 					user.email = auth.info.email
 					user.name = auth.info.name
 					#user.first_name = auth.info[:first_name]
-					#user.location = auth.info[:location]
+					# user.location = auth.info[:location]
 
 
 					user.first_name = auth.info.first_name

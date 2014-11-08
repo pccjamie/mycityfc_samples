@@ -3,6 +3,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
 
 	def facebook
+		#render :text => "<pre>" + request.env["omniauth.auth"].to_yaml and return
 
 		@user = User.add_info_from_omniauth(request.env["omniauth.auth"])
 
