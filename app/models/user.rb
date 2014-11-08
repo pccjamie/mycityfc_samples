@@ -17,6 +17,11 @@ class User < ActiveRecord::Base
 
 					user.email = auth.info.email
 					user.name = auth.info.name
+
+					#TODO - migration - add url field to db. then add to User model. Will be used to provide user direct link back to FB profile if they need  to update something.
+
+					# user.url = auth.extra.raw_info.link
+
 					user.first_name = auth.info.first_name
 					user.location = auth.info.location
 					user.picture = auth.info.image

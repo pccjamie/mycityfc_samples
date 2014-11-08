@@ -1,29 +1,80 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<!--override Devise's default reg/edit form...-->
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+<div id="content-1" class="row">
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+	<div class="small-12 medium-6 columns">
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+			<%= devise_error_messages! %>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+			<header class="page-title">
+				<h2>My Profile</h2>
+			</header>
+			<table class="current">
+				<tr>
+					<td>
+						<%= current_user.name %>
+						<br/>
+						<%= current_user.location %>
+					</td>
+					<td><%= image_tag current_user.picture %></td>
+				</tr>
+			</table>
 
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %></div>
+			<% if user_signed_in? %> <!--&& (current_user.profile || current_user.primary_team) == nil-->
 
-  <div><%= f.submit "Update" %></div>
-<% end %>
+				<div class="field-group">
+					<div class="small-6 columns small-centered">
+						<%= f.label :primary_team, 'Follow Any Team', :class => 'profile-field' %>
+						<%= f.collection_select(:primary_team, Team.all, :name, :name) %>
+					</div>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+					<div class="small-6 columns small-centered">
 
-<%= link_to "Back", :back %>
+						<!--TODO move the range input field into partial for use here but also on Teams index page -->
+						<%= f.label :distance, 'Display Teams Near Me', :class => 'profile-field' %>
+						<h4 class="section-title">Distance</h4>
+						<%= f.range_field :distance, in: 0.0..1360.0,
+															:value         => @travel_distance,
+															:step          => 'all',
+															:list          => 'distance-settings'
+						%>
+						<!--<output for=user_distance id=volume><span id="user_distance_ctr"></span></output>-->
+						<datalist id=distance-settings>
+							<option>10</option>
+							<option>20</option>
+							<option>30</option>
+							<option>40</option>
+							<option>50</option>
+							<option>60</option>
+							<option>70</option>
+							<option>80</option>
+							<option>90</option>
+							<option>100</option>
+
+						</datalist>
+					</div>
+				</div>
+				<div class="field-group actions">
+					<%= f.submit "Save", :class => 'button' %>
+					<%= link_to "Cancel", root_path, :class => 'button' %>
+					<%= link_to "Back", :back %>
+
+				</div>
+
+			<% end %>
+		<% end %>
+	</div>
+</div>
+
+
+
+
+<!-- form -->
+
+<!-- <h3>Cancel my account</h3>-->
+<!--<p>Unhappy? <%#= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>-->
+<%#= link_to "Back", :back %>
+

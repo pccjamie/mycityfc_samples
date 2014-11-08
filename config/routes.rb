@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-	# AUTO GENERATED WITH CONTROLLER / VIEW
 	get 'dashboard/index'
 
 =begin
@@ -45,5 +44,5 @@ Rails.application.routes.draw do
 	authenticated do
 		root :to => 'dashboard#index', :as => :authenticated
 	end
-	
+
 end
