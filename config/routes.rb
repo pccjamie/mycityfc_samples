@@ -21,7 +21,8 @@ Rails.application.routes.draw do
 	devise_for :users,
 						 :controllers => {
 							 :omniauth_callbacks => 'users/omniauth_callbacks',
-							 :registrations => 'users/registrations'
+							 :registrations => 'users/registrations',
+							 :sessions => 'users/sessions'
 						 },
 						 :path_names  => {
 							 sign_in:  'devise/sessions#new', #:as => :new_user_session,
@@ -39,11 +40,10 @@ Rails.application.routes.draw do
 
 
 	# ROOT
-	#no auth
-	root 'static_pages#landing'
 
-	#with auth
+	root 'static_pages#landing'
 	authenticated do
 		root :to => 'dashboard#index', :as => :authenticated
 	end
+	
 end

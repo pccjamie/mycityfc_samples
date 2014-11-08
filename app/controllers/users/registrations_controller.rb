@@ -1,24 +1,15 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 
-	# inherits from and adds to Devise::RegistrationsController
-	# here, just tweaking two private methods that handle parameter sanitization before updating the User model.
-
-	# def create
-	#
-	# end
-
 	private
 
-	# TODO - turn this on once I add db authentication. Right now, only using Omniauth-facebook, which does not allow signing up and specifying your own params during the acct creation process.
+	# App allows user to update their profile (see User model) after sign up/sign in. These overrides of default Devise methods specify the params which should be sanitized so that accounts can be created, edited, and saved correctly. Careful, ONLY specify what the user should be able to edit directly from within the website.
 
-
+	# TODO -  specify attrs instead of using global permit
 	def sign_up_params
 		params.require(:user).permit!
 	end
 
-
-	# App allows user to update their profile (User model attrs) after sign in. This specifies params which should be sanitized so that they can be saved to in the User model.
-
+	# TODO -  specify attrs instead of using global permit
 	def account_update_params
 		params.require(:user).permit!
 	end

@@ -15,33 +15,18 @@ class User < ActiveRecord::Base
 			#	none found so create a new one based on hash of FB info.
 			# SCHEMA - https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema
 
-			# pulling in min info for now
 					user.email = auth.info.email
 					user.name = auth.info.name
-					#user.first_name = auth.info[:first_name]
-					# user.location = auth.info[:location]
-
-
 					user.first_name = auth.info.first_name
 					user.location = auth.info.location
-
-
 					user.picture = auth.info.image
-
-
-
+					user.city = auth.info[:location].split(',').first
+					user.state = auth.info[:location].split(',').last.strip
 					user.password = Devise.friendly_token[0,20]
 
 			# u.name = auth.extra.raw_info.name
-			# u.first_name = auth.info[:first_name]
 			# u.provider = auth.provider
 			# u.uid = auth.uid
-			# u.email = auth.info.email
-			# u.password = Devise.friendly_token[0, 20]
-			# u.location = auth.info[:location]
-			# u.city = auth.info[:location].split(',').first
-			# u.state = auth.info[:location].split(',').last
-			# u.picture = auth.info[:image]
 
 
 		end
