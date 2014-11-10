@@ -3,7 +3,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 	# override Devise's registrations#update
 	def update
 
-		account_update_params = devise_parameter_sanitizer.sanitize(:account_update)
+		#account_update_params = devise_parameter_sanitizer.sanitize(:account_update)
 
 		# bypass Devise default PW requirements
 		if params[:user][:password].blank?

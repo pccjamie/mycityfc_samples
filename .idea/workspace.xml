@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa39e5d5-1e35-42b4-b428-8eff8016cc5d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" />
     </list>
     <ignored path="mycityfc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,11 +81,11 @@
           <file leaf-file-name="registrations_controller.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/users/registrations_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.12793177" vertical-offset="0" max-vertical-offset="938">
-                  <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+                <state vertical-scroll-proportion="0.07995736" vertical-offset="0" max-vertical-offset="938">
+                  <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
                   <folding>
-                    <element signature="e#1127#1182#0" expanded="true" />
-                    <element signature="e#1185#1247#0" expanded="true" />
+                    <element signature="e#1128#1183#0" expanded="true" />
+                    <element signature="e#1186#1248#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -1271,11 +1271,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users/registrations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12793177" vertical-offset="0" max-vertical-offset="938">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.07995736" vertical-offset="0" max-vertical-offset="938">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
           <folding>
-            <element signature="e#1127#1182#0" expanded="true" />
-            <element signature="e#1185#1247#0" expanded="true" />
+            <element signature="e#1128#1183#0" expanded="true" />
+            <element signature="e#1186#1248#0" expanded="true" />
           </folding>
         </state>
       </provider>
