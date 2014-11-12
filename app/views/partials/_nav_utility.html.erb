@@ -21,12 +21,12 @@
 <ul id="hover1" class="f-dropdown" data-dropdown-content>
 
 	<li><a href="#">About MYCITYFC</a></li>
-	<li>
-		<%= link_to edit_user_registration_path, :class => 'has-image link-to-admin ' do %>
-			<!--<span><%#= current_user.first_name %></span>-->
-			Settings
-		<% end %>
-	</li>
+	<!--<li>-->
+		<!--<%#= link_to edit_user_registration_path, :class => 'has-image link-to-admin ' do %>-->
+			<!--&lt;!&ndash;<span><%#= current_user.first_name %></span>&ndash;&gt;-->
+			<!--Settings-->
+		<!--<%# end %>-->
+	<!--</li>-->
 	<li><%= link_to('Logout', destroy_user_session_path, :method => :delete,:class=> 'link-to-admin') %></li>
 </ul>
 </div>

@@ -1,6 +1,7 @@
 @import "colors";
 @import "typography";
 @import "mixins";
+@import "colors";
 
 body {
 	background-size: cover;
@@ -92,6 +93,10 @@ p {
 	}
 }
 
+
+hr {background: transparent;
+border-color: transparent}
+
 //flash messages
 .notice, .alert {
 	height: 100%;
@@ -139,7 +144,7 @@ nav {
 }
 
 #nav-wrap {
-	background: $blue-75;
+	background: $blue-50;
 }
 
 #nav-primary {
@@ -394,8 +399,8 @@ footer {
 	min-height: 100px;
 	margin-top: 10px;
 	width: 100%;
-	background-color: $yellow-75;
-	position: fixed;
+	background-color: $yellow-50;
+	position: relative;
 	//  left: 0;
 	  bottom: 0;
 	display: block;
@@ -430,10 +435,9 @@ footer {
 }
 
 .link-to-anchor, .link-to-page {
-	background: $black-50;
-	border: 1px solid white;
-	padding: 0 2.5px;
-	display: block;
+	background: none;
+	text-decoration: underline;
+	display: inline-block;
 }
 
 //.link-to-anchor, .link-to-page {

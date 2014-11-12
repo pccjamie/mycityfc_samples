@@ -1,5 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 
+	before_filter :authenticate_user!
+
 	# override Devise's registrations#update
 	def update
 
@@ -17,7 +19,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 			set_flash_message :notice, :updated
 			# Sign in the user bypassing validation in case their password changed
 			sign_in @user, :bypass => true
-			redirect_to after_update_path_for(@user)
+			redirect_to dashboard_index_path
 		else
 			render "edit"
 		end

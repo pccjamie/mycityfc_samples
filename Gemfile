@@ -45,6 +45,7 @@ gem 'omniauth-facebook'
 # Foundation
 gem 'foundation-rails', group: [:development, :production]
 
+gem 'httparty'
 gem 'geocoder' #geocoding
 gem 'chronic' #natural language time formatter
 gem 'activesupport' #, "~> 3.1.1"

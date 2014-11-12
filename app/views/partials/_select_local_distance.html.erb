@@ -1,7 +1,7 @@
 <div id="select-distance">
-	<h3 class="small-9 columns">
+	<h4 class="small-9 columns" style="color: lightgoldenrodyellow">
 		Teams within
-		<output class="data" id="user_distance_value"><span></span></output>
+		<output class="data" id="user_distance_value"><span><%= current_user.distance %></span></output>
 		miles of
 		<output class="data"><%= current_user.city %></output>
 						<span class="has-tip" data-tooltip aria-haspopup="true"
@@ -9,7 +9,7 @@
 							The closest team is styled differently. TODO - add AJAX support so page isn't reloaded each time the user changes the distance">
 					?
 				</span>
-	</h3>
+	</h4>
 
 	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
 		<%= devise_error_messages! %>

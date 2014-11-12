@@ -1,6 +1,12 @@
 <div id="content-1" class="view-teams row">
 	<div class="small-7 columns">
-		<h3 class="section-title">FIND MY TEAM</h3>
+		<h3 class="section-title">
+			<% if current_user.primary_team.nil? %>
+				<div class="one">Welcome</div>
+			<% else %>
+				<div class="two">Find a new team</div>
+			<% end %>
+			</h3>
 	</div>
 
 	<div class="small-5 columns">
@@ -11,27 +17,30 @@
 	</div>
 
 	<hr>
+
+
 	<div class="clearfix"></div>
 
-	<div id="geo" class="small-3 columns">
+	<div id="geo" class="small-4 columns">
 		<a class="anchor-top" name="content1"></a>
-		<header><h3>Teams Near Me<span class="has-tip"
+		<header><h4>- by location<span class="has-tip"
 																	 data-tooltip
 																	 aria-haspopup="true"
 																	 title="Team locations are geocoded based on address. Users who provide an FB location will
 																	  be geocoded on every profile save, if their location has changed since the last save).
 																	  App compares the user's location to team locations and returns results,
 																	  ordered by distance, as the user adjusts their preferred travel distance.">?
-</span></h3></header>
+</span></h4></header>
 		<p>Search for MLS, NASL, or USL Pro teams close to you!. Use the slider to your right. The closest team to you regardless of league will appear first.</p>
 
 		<hr>
 		<p class="first-person">
-			<a href="#content2" class="link-to-anchor">View all teams</a></p>
+			<a href="#content2" class="link-to-anchor">View teams by league</a></p>
 
 	</div>
+	<i class="fi-arrow-down"></i>
 
-	<div class="small-8 small-offset-1 columns">
+	<div class="small-8 columns">
 		<%= render 'partials/select_local_distance' %>
 		<%= render 'partials/select_local_team' %>
 	</div>
@@ -43,11 +52,11 @@
 	<div class="small-3 columns">
 		<a class="anchor-bottom" name="content2"></a>
 
-		<header><h3>ALL PRO TEAMS<span class="has-tip"
+		<header><h4>- by league<span class="has-tip"
 																	 data-tooltip
 																	 aria-haspopup="true"
 																	 title="ALL TEAMS:">?
-</span></h3></header>
+</span></h4></header>
 		<p>MYCITYFC maintains an up to date directory of all teams in the top three leagues of the United States soccer pyramid. Browse Major League Soccer, NASL, or USL Pro, and click a team to follow.</p>
 
 		<hr>

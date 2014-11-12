@@ -1,9 +1,22 @@
 <!-- aggregates all content for the user's preferred team -->
+<div id="content-1" class="row">
+	<div class="medium-7 small-12 columns">
+		<%= render 'partials/gameday' %>
+		<%= render 'partials/next_game' %>
+	</div>
 
-
-<!-- temp logout link so callback flow is verified-->
-<div class="row" data-no-turbolink>
-	authenticated. display aggregated content (unless no prefs yet)....
-	<%= link_to('Logout', destroy_user_session_path, :method => :delete, :class=> 'link-to-admin') %>
+	<div class="medium-5 small-12 columns">
+		<%= render 'partials/main_display_social' %>
+		<%#= render 'partials/videos' %>
+	</div>
 </div>
 
+<div id="content-2" class="row">
+	<div class="medium-7 small-12 columns">
+		<%= render 'partials/game_previews' %>
+	</div>
+
+	<div class="medium-5 small-12 columns">
+		<%= render 'partials/game_results' %>
+	</div>
+</div>
