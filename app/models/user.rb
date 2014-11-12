@@ -2,6 +2,9 @@ class User < ActiveRecord::Base
 	# Include default devise modules. Others available are:
 	# :confirmable, :lockable, :timeoutable and :omniauthable
 
+	geocoded_by :city
+	after_validation :geocode
+
 	devise :database_authenticatable, :registerable,
 				 :recoverable, :rememberable, :trackable, :validatable,
 				 :omniauthable,
@@ -12,7 +15,6 @@ class User < ActiveRecord::Base
 		# find existing or create new
 		where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
 
-			#	none found so create a new one based on hash of FB info.
 			# SCHEMA - https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema
 
 					user.email = auth.info.email

@@ -1,5 +1,6 @@
-User.delete_all
+# User.delete_all
 Team.delete_all
+User.delete_all
 #seed prod with this for now...but eventually need to be able to manage all this from UI.
 t1  = Team.create!(:name => 'Seattle Sounders FC', :venue => 'CenturyLink Field', :address => '6800 Occidental Ave S, Seattle, WA', :city => 'Seattle', :state => 'WA', :league => 'MLS', :logo => 'https://s3.amazonaws.com/soccer-production-jyr/logos/seattle_150.png')
 t2  = Team.create!(:name => 'New York Red Bulls', :venue => 'Red Bull Arena, Harrison, NJ', :address => '600 Cape May St, Harrison, NJ', :city => 'Harrison', :state => 'NJ', :league => 'MLS', :logo => 'https://s3.amazonaws.com/soccer-production-jyr/logos/newyork_150.png')
@@ -16,7 +17,7 @@ Columbus, OH 43211', :city => 'Columbus', :state => 'OH', :league => 'MLS', :log
 t12 = Team.create!(:name => 'Toronto FC', :venue => 'BMO Field', :address => '170 Princes\' Blvd, Toronto, ON M6K 3C3, Canada', :city => 'Toronto', :state => 'ON', :league => 'MLS', :logo => 'https://s3.amazonaws.com/soccer-production-jyr/logos/toronto_150.png')
 t13 = Team.create!(:name => 'Chivas USA', :venue => 'StubHub Center', :address => '18400 S Avalon Blvd, Carson, CA 90746', :city => 'Carson', :state => 'CA', :league => 'MLS', :logo => 'https://s3.amazonaws.com/soccer-production-jyr/logos/chivas_150.png')
 t15 = Team.create!(:name => 'FC Dallas', :venue => 'FC Dallas Stadium', :address => '9200 World Cup Way, Ste 202, Frisco, TX 75034-4958', :city => 'Frisco', :state => 'TX', :league => 'MLS', :logo => 'https://s3.amazonaws.com/soccer-production-jyr/logos/dallas_150.png')
-t16 = Team.create!(:name => 'Real Salt Lake', :venue => 'Rio Tinto Stadium', :address => '9256 S State St, Sandy, UT 84070', :city => 'Sandy', :state => 'UT', :league => 'MLS', :logo => 'saltlake_150.png')
+t16 = Team.create!(:name => 'Real Salt Lake', :venue => 'Rio Tinto Stadium', :address => '9256 S State St, Sandy, UT 84070', :city => 'Sandy', :state => 'UT', :league => 'MLS', :logo => 'https://s3.amazonaws.com/soccer-production-jyr/logos/saltlake_150.png')
 t17 = Team.create!(:name => 'Vancouver Whitecaps', :venue => 'BC Place', :address => '777 Pacific Blvd, Vancouver, BC V6B 4Y8, Canada', :city => 'Vancouver', :state => 'BC', :league => 'MLS', :logo => 'https://s3.amazonaws.com/soccer-production-jyr/logos/vancouver_150.png')
 t18 = Team.create!(:name => 'Montreal Impact', :venue => 'Stade Saputo', :address => '4750 Rue Sherbrooke Est, Montreal, QC H1V 3S8', :city => 'Montreal', :state => 'QB', :league => 'MLS', :logo => 'https://s3.amazonaws.com/soccer-production-jyr/logos/montreal_150.png')
 t19 = Team.create!(:name => 'Sporting Kansas City', :venue => 'Sporting Park', :address => '1 Sporting Way, Kansas City, KS 66111', :city => 'Kansas City', :state => 'KS', :league => 'MLS', :logo => 'https://s3.amazonaws.com/soccer-production-jyr/logos/sportingkclogo_150.png')

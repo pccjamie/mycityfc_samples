@@ -1,0 +1,65 @@
+<div id="content-1" class="view-teams row">
+	<div class="small-7 columns">
+		<h3 class="section-title">FIND MY TEAM</h3>
+	</div>
+
+	<div class="small-5 columns">
+		<h5 class="current-user-primary-team">You are supporting
+			<span class="data"><%= current_user.primary_team %>  <%= link_to 'See More', dashboard_index_path,
+																																			 :class => 'link-to-page right' %></span>
+		</h5>
+	</div>
+
+	<hr>
+	<div class="clearfix"></div>
+
+	<div id="geo" class="small-3 columns">
+		<a class="anchor-top" name="content1"></a>
+		<header><h3>Teams Near Me<span class="has-tip"
+																	 data-tooltip
+																	 aria-haspopup="true"
+																	 title="Team locations are geocoded based on address. Users who provide an FB location will
+																	  be geocoded on every profile save, if their location has changed since the last save).
+																	  App compares the user's location to team locations and returns results,
+																	  ordered by distance, as the user adjusts their preferred travel distance.">?
+</span></h3></header>
+		<p>Search for MLS, NASL, or USL Pro teams close to you!. Use the slider to your right. The closest team to you regardless of league will appear first.</p>
+
+		<hr>
+		<p class="first-person">
+			<a href="#content2" class="link-to-anchor">View all teams</a></p>
+
+	</div>
+
+	<div class="small-8 small-offset-1 columns">
+		<%= render 'partials/select_local_distance' %>
+		<%= render 'partials/select_local_team' %>
+	</div>
+
+</div>
+<div id="content-2" class="row">
+	<hr>
+
+	<div class="small-3 columns">
+		<a class="anchor-bottom" name="content2"></a>
+
+		<header><h3>ALL PRO TEAMS<span class="has-tip"
+																	 data-tooltip
+																	 aria-haspopup="true"
+																	 title="ALL TEAMS:">?
+</span></h3></header>
+		<p>MYCITYFC maintains an up to date directory of all teams in the top three leagues of the United States soccer pyramid. Browse Major League Soccer, NASL, or USL Pro, and click a team to follow.</p>
+
+		<hr>
+		<p class="first-person">
+			<a href="#content1" class="link-to-anchor">Find a team near me</a></p>
+
+	</div>
+
+	<div id="no-geo" class="small-8 small-offset-1 columns">
+		<%= render 'partials/displays_league_slider' %>
+	</div>
+</div>
+
+
+

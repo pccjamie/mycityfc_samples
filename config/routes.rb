@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 	get 'dashboard/index'
+	get 'teams/index'
 
 =begin
 - Desc:

@@ -1,5 +1,6 @@
 //pattern - create module, assign to var, fill with stuff
-MYCITYFC = {
+
+var MYCITYFC = {
 
     HELPERS: {
 
@@ -9,9 +10,9 @@ MYCITYFC = {
             return console.log(v);
         },
 
-        myTeam: function () {
-            var myTeam = $('.my-team').text();
-        },
+//        myTeam: function () {
+//            var myTeam = $('.my-team').text();
+//        },
 
         applyScroll: function (div) {
             $(div).tinyscrollbar();
@@ -27,6 +28,7 @@ MYCITYFC = {
 
         name: 'MYCITYFCVIEW',
 
+        // TODO edit dates
         filterSchedule: function () {
 
             var today = moment().format("MM-DD-YYYY"),
@@ -250,7 +252,8 @@ MYCITYFC = {
 
 
         },
-        formatTV: function () {
+
+        formatGameTV: function () {
 
             var chName = $('.field-broadcast-partners strong');
             chName.each(function (i, e) {
@@ -274,7 +277,7 @@ MYCITYFC = {
 
         },
 
-        displayGameFields: function () {
+        formatGameLinks: function () {
             if (($('a.game-matchcenter') || $('a.game-tickets')).empty()) {
                 $(this).css('display', 'none');
             }
@@ -299,22 +302,19 @@ MYCITYFC = {
             });
         }
 
-
     }
 
 };
 
+
 //init on page load
 $(function () {
 
-    MYCITYFC.GLOBALS.fb();
-
 //    MYCITYFC.HELPERS.applyScroll('.scrollMe');
-//    MYCITYFC.MAIN.filterSchedule();
-//    MYCITYFC.MAIN.displayGameDay();
-//    MYCITYFC.MAIN.filterGames();
-//    MYCITYFC.MAIN.displayGameFields();
-//    MYCITYFC.MAIN.formatTV();
-
+    MYCITYFC.MAIN.filterSchedule();
+    MYCITYFC.MAIN.filterGames();
+    MYCITYFC.MAIN.displayGameDay();
+    MYCITYFC.MAIN.formatGameTV();
+    MYCITYFC.MAIN.formatGameLinks();
 
 });

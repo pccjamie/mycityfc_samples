@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
 	#before_action :authenticate_user!
 
 	def after_update_path_for(user)
-			dashboard_index_path
+		dashboard_index_path
 	end
 
 end

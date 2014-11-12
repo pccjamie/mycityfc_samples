@@ -17,60 +17,31 @@
 //= require foundation/foundation.tooltip
 //= require foundation/foundation.orbit
 //= require foundation/foundation.dropdown
-
-//more stuff coming
+//= require jquery.cycle2
+//= require moment
+//= require hoverintent
+//= require jquery.tinyscrollbar
 
 //= require_tree .
 
-//declare mycityfc and globals here
+MYCITYFC.GLOBALS = {
 
-var MYCITYFC = {
+    name: 'GLOBALSVIEW',
 
-    GLOBALS: {
-
-        name: 'GLOBALSVIEW',
-
-        displayAdmin: function () {
-            $('#view-tips').on('click', function () {
-                $(this).toggleClass('view-on');
-                $('.section-title').toggleClass('extra-padding');
-                $('.has-tip').toggle();
-            });
-        },
-
-        fb: function () {
-
-            //FB callback now appends this hash '#_=_' to a page's URL. This JS removes that, as well as controls related impact on page scroll.
-            if (window.location.hash && window.location.hash == '#_=_') {
-                if (window.history && history.pushState) {
-                    window.history.pushState("", document.title, window.location.pathname);
-                } else {
-                    // Prevent scrolling by storing the page's current scroll offset
-                    var scroll = {
-                        top: document.body.scrollTop,
-                        left: document.body.scrollLeft
-                    };
-                    window.location.hash = '';
-                    // Restore the scroll offset, should be flicker free
-                    document.body.scrollTop = scroll.top;
-                    document.body.scrollLeft = scroll.left;
-                }
-            }
-//see: http://stackoverflow.com/questions/7131909/facebook-callback-appends-to-return-url
-
-
-        }
-
-
-
-
+    displayAdmin: function () {
+        $('#view-tips').on('click', function () {
+            $(this).toggleClass('view-on');
+            $('.section-title').toggleClass('extra-padding');
+            $('.has-tip').toggle();
+        });
     }
+
 };
+
 
 $(function () {
 
     $(document).foundation();
-    MYCITYFC.GLOBALS.fb();
     MYCITYFC.GLOBALS.displayAdmin();
 
 });
