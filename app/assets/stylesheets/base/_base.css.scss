@@ -144,7 +144,7 @@ nav {
 }
 
 #nav-wrap {
-	background: $blue-50;
+	background: $blue;
 }
 
 #nav-primary {
@@ -227,7 +227,7 @@ nav {
 			color: $white;
 
 			img {
-					border: 1px solid $white;
+					border: 1px solid $white-25;
 					height: 40px;
 //					padding: 4px;
 				}
@@ -252,9 +252,9 @@ nav {
 
 .dropdown {text-align:right;}
 .f-dropdown {
-	background: $blue-75;
+
+	background: $blue;
 	border: none;
-//	margin-left: -(1000px / 12);
 	margin-top: 5px;
 	margin-left: -6.5rem;
 
