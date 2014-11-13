@@ -16,7 +16,9 @@
 //= require foundation/foundation
 //= require foundation/foundation.tooltip
 //= require foundation/foundation.orbit
+//= require foundation/foundation.reveal
 //= require foundation/foundation.dropdown
+
 //= require jquery.cycle2
 //= require moment
 //= require hoverintent

@@ -48,25 +48,16 @@
 
 				</ul>
 
-				<!--<ul>-->
-
-				<!--<li class="small-12 columns">Videos</li>-->
-				<!--<li class="small-12 columns">Schedule</li>-->
-				<!--<li class="small-12 columns">Results</li>-->
-
-				<!--</ul>-->
-
 			</div>
 
 		</nav>
 
 		<div id="intro-options">
 
-			<a href="#" class="small-4 columns link-to">TAKE A TOUR</a>
+			<a href="#" class="small-4 columns link-to" data-reveal-id="firstModal">TAKE A TOUR</a>
 			<a href="#login" class="small-12 columns jump link-to">Login</a>
 
 		</div>
-		<!--<p><i class="fi-arrow-down row">More</i></p>-->
 
 	</div>
 
@@ -130,3 +121,34 @@
 	<hr>
 	<h1 class="row">MYCITYFC.COM &copy;2013-2014</h1>
 </div>
+
+
+
+
+<!-- Reveal Modals begin -->
+<div id="firstModal" class="reveal-modal" data-reveal>
+	<h2>PICK A TEAM</h2>
+	<%= image_tag "tim_howard_1.jpg" %>
+	<p><a href="#" data-reveal-id="secondModal" class="secondary button">NEXT: LOCAL</a></p>
+	<a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div id="secondModal" class="reveal-modal" data-reveal>
+	<h2>GET STUFF.</h2>
+	<%= image_tag "closeup_flip2.jpg" %>
+
+	<p>See? It just slides into place after the other first modal. Very handy when you need subsequent dialogs, or when a modal option impacts or requires another decision.</p>
+	<p><a href="#" data-reveal-id="thirdModal" class="secondary button">THE END > </a></p>
+	<a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+<div id="thirdModal" class="reveal-modal" data-reveal>
+	<h2>WOOHOO.</h2>
+	<%= image_tag "closeup_flip2.jpg" %>
+	<p>See? It just slides into place after the other first modal. Very handy when you need subsequent dialogs, or when a modal option impacts or requires another decision.</p>
+	<%= link_to image_tag('fb.png'), user_omniauth_authorize_path(:facebook) %>
+
+	<a class="close-reveal-modal">&#215;</a>
+</div>
+

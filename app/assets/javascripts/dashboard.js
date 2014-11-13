@@ -278,6 +278,13 @@ var MYCITYFC = {
         },
 
         formatGameLinks: function () {
+
+//            $('#js-schedule .js-single-game .home-team:empty').parent().empty().text('Pending');
+
+            var poo = $('#js-schedule .js-single-game .home-team:empty').siblings(':not(".game-date")');
+            $(poo).empty().parent().append('<p>Game information unavailable at this time.</p>');
+
+
             if (($('a.game-matchcenter') || $('a.game-tickets')).empty()) {
                 $(this).css('display', 'none');
             }
@@ -310,7 +317,7 @@ var MYCITYFC = {
 //init on page load
 $(function () {
 
-//    MYCITYFC.HELPERS.applyScroll('.scrollMe');
+    MYCITYFC.HELPERS.applyScroll('.scrollMe');
     MYCITYFC.MAIN.filterSchedule();
     MYCITYFC.MAIN.filterGames();
     MYCITYFC.MAIN.displayGameDay();

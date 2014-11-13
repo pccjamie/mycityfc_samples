@@ -1,3 +1,732 @@
-// Place all the styles related to the Dashboard controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+//teams controller
+@import "base/colors";
+@import "base/typography";
+@import "base/mixins";
+
+/* DONT TOUCH */
+.my-team {
+	display: none;
+}
+
+//overrides on Nokogiri
+.field-other-links a {
+	color: oldlace !important;
+	text-transform: lowercase;
+	&:hover {
+		color: $white !important;
+	}
+}
+
+// SINGLE GAME DEFAULTS */
+.js-single-game {
+	height: auto;
+	padding: 10px;
+	margin-bottom: 1px;
+	display: block;
+	letter-spacing: 3px;
+	float: left;
+	z-index: 20;
+
+	.game-date {
+		width: 100%;
+	}
+
+	.field-home-team-logo,
+	.field-away-team-logo {
+		display: inline;
+		width: auto;
+	}
+
+	//careful....
+	.game-links {
+
+		border-top: 1px solid $white-25;
+
+		//    .row {padding: 15px 0;}
+
+		.field-broadcast-partners,
+		.field-other-links {
+			display: block;
+		}
+
+		.field-other-links {
+			margin-top: 15px;
+		}
+
+		.field-broadcast-partners a {
+			font-weight: none
+		}
+		.field-broadcast-partners br {
+			display: none
+		}
+
+		a {
+			padding: 2.5px;
+			margin: 2.5px 0;
+
+			&:hover {
+				background: $aqua-15;
+				text-decoration: none;
+			}
+
+		}
+
+		.row:nth-child(1),
+		.row:nth-child(2) {
+
+			* {
+				font-family: $font-normal;
+				letter-spacing: 0;
+				text-transform: lowercase;
+			}
+
+			a {
+				background: 0;
+				text-decoration: underline;
+			}
+		}
+
+	}
+
+	span.separator {
+		width: 40px;
+		text-align: center
+	}
+
+}
+
+#js-gameday, #js-next-game-section {
+
+	border: 1px solid $white-25;
+
+}
+
+/*** GAME DAY - CONTAINER ***/
+#js-gameday {
+	height: auto;
+	width: 100%;
+	margin: 0 auto;
+	display: none;
+	position: relative;
+	z-index: 9999;
+
+	@include fadeblue();
+
+	border-bottom: 0;
+
+	.section-title {
+		background: none
+	}
+
+	.sleeve {
+		height: auto;
+		margin: auto;
+		padding: 20px;
+		position: relative;
+
+		a {
+			float: right;
+			text-align: right;
+		}
+
+	}
+
+	#js-gameday-toggle {
+		padding: 5px;
+		line-height: inherit;
+		color: white;
+		text-align: center;
+		cursor: pointer;
+
+		&:hover {
+			color: $lime;
+		}
+	}
+
+}
+
+/* ROW 1 - NEXT GAME / VIDEOS */
+#content-1 {
+	background: $blue-50;
+	padding: 0.9375rem 0 0.9375rem 0;
+}
+
+#js-next-game-section {
+
+	border-top: 0;
+	padding: 0.9375rem 0 0.9375rem 0;
+	padding: 15px;
+
+}
+
+#js-next-game {
+	height: 100%;
+	display: block;
+
+	.section-title {
+		background: none;
+		padding: 0;
+		text-align: left;
+		float: none;
+	}
+
+	.js-single-game {
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		font-family: $font-special;
+		font-size: 150%;
+		line-height: normal;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		text-align: left;
+
+		.game-date {
+			background: 0;
+			display: inline;
+		}
+
+		.game-time {
+			display: block;
+			width: 100%;
+			margin-bottom: 15px;
+		}
+
+		.game-competition {
+
+			width: 100%;
+			margin-top: 5px;
+
+		}
+
+		.home-team,
+		.away-team {
+			text-transform: uppercase;
+			display: inline-block;
+			overflow-wrap: break-word;
+			width: auto;
+			font-size: 2em;
+		}
+
+		.separator {
+			font-size: 100%;
+			display: inline;
+		}
+
+		.field-home-team-logo, .field-away-team-logo {
+			height: inherit;
+			display: inline-block;
+			display: none;
+
+		}
+
+		.game-score {
+			display: none
+		}
+
+		.game-links {
+
+			width: 100%;
+			padding: 15px 0;
+			text-align: left;
+
+			.row:nth-child(1) {
+
+			}
+			.row:nth-child(2) {
+			}
+
+			p, a {
+				font-size: 100%;
+				font-family: $font-normal;
+				display: inline-block;
+				border: none;
+
+				&:nth-child(odd) {
+					margin-right: 5px;
+				}
+
+				&:nth-child(even) {
+					margin-left: 5px;
+				}
+
+			}
+
+			a {
+				display: inline;
+				color: oldlace;
+				&:hover {
+					border: none;
+					text-decoration: none;
+				}
+			}
+
+			p {
+				color: $black-75;
+			}
+
+			#label-tv {
+				padding-left: 15px;
+			}
+
+			#label-other {
+
+				a {
+					font-family: $font-normal !important;
+				}
+
+			}
+
+			.field-other-links a {
+				background: orange;
+				border: 1px solid $white-10;
+				text-transform: lowercase;
+
+				height: 100%;
+				width: 50%;
+				padding: 15px;
+				display: inline;
+				margin: 0;
+				float: left;
+
+				font-size: 75%;
+				text-align: left;
+
+				&:hover {
+					background: $aqua-15;
+				}
+
+				&.sch_tickets {
+					//          background: url('http://theoriginalwinger.com/wp-content/uploads/2013/07/All-Star-Tickets.jpg');
+					background-repeat: no-repeat;
+					background-position: left center;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+#js-social {
+
+	height: 100%;
+	width: 100%;
+	display: block;
+	float: left;
+	margin-bottom: 10px;
+
+	article {
+		height: 125px;
+		width: 100%;
+		float: left;
+		background: $steel-25;
+	}
+
+}
+
+#js-videos {
+
+	float: left;
+	width: 100%;
+
+	.orbit-container {
+		background: $steel-75;
+		background: $black-25;
+		padding: 15px;
+		padding-bottom: 0;
+
+		.orbit-bullets-container {
+
+			display: none;
+
+			.orbit-bullets {
+				margin: 0;
+			}
+
+		}
+
+		.orbit-slide-number {
+			background: $steel-50;
+			color: yellow;
+			bottom: 0;
+			right: 0;
+			position: relative;
+			display: none
+		}
+
+		li {
+			padding: 0;
+
+			&:not(.active) {
+
+				opacity: .25;
+
+				.flex-video {
+					padding: 0;
+					-webkit-filter: grayscale(75%);
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/* ROW 2 - SCHEDULE */
+#content-2 {
+
+	@include fadebluedown();
+
+}
+
+/*** GAME PREVIEWS - CONTAINER ***/
+#game-previews {
+
+	height: auto;
+	//  height: 360px;
+	width: 100%;
+	padding-top: 20px;
+	float: left;
+
+}
+
+/*** GAME RESULTS - CONTAINER ***/
+#js-game-results-section {
+
+	height: auto;
+	width: 100%;
+	display: block;
+	padding-top: 20px;
+	float: left;
+	//
+	//  #results-trigger {
+	//    height: auto;
+	//    width: 100%;
+	//    width:auto;
+	//    margin: auto;
+	//    text-align: left;
+	//    float: left;
+	//
+	//  }
+
+	#js-game-results {
+		height: auto;
+		display: block;
+		width: 90%;
+
+		-webkit-transition: display 1s ease-in-out;
+		-moz-transition: display 1s ease-in-out;
+		-o-transition: display 1s ease-in-out;
+		transition: display 1s ease-in-out;
+
+		a {
+			height: auto;
+			width: 100%;
+			float: left;
+			display: inline;
+
+			&:nth-of-type(odd) {
+				background: rgba(155, 161, 162, .25);
+			}
+
+			&:nth-of-type(even) {
+				background: rgba(155, 161, 162, .55);
+			}
+
+			//      * {font-family: $font-normal}
+
+			&:hover {
+				background: $aqua-15;
+				text-decoration: none;
+			}
+
+		}
+
+	}
+
+	#js-game-results .viewport {
+		height: 320px;
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+
+	#js-game-results .overview {
+		list-style: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin: 0;
+	}
+
+	#js-game-results .scrollbar {
+		background: $yellow;
+		position: absolute;
+		right: 20px;
+		top: 63px;
+		width: 10px;
+	}
+
+	#js-game-results .track {
+		background: $white-50;
+		height: 100%;
+		width: 8px;
+		position: relative;
+		padding: 0 1px;
+	}
+
+	#js-game-results .thumb {
+		background: $steel;
+		height: 20px;
+		width: 20px;
+		cursor: pointer;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: -5px;
+	}
+
+	#js-game-results .thumb .end {
+		overflow: hidden;
+		height: 5px;
+		width: 25px;
+	}
+
+	#js-game-results .disable {
+		display: none;
+	}
+
+	.noSelect {
+		user-select: none;
+		-o-user-select: none;
+		-moz-user-select: none;
+		-khtml-user-select: none;
+		-webkit-user-select: none;
+	}
+
+	.js-single-game {
+		display: block;
+		width: 100%;
+		&:hover {
+			background: $aqua-15;
+			text-decoration: none;
+		}
+
+		.game-date {
+			margin-bottom: 5px;
+		}
+
+		.home-team, .away-team {
+			display: inline;
+			//      width: 33%;
+			text-align: center;
+		}
+
+		.field-home-team-logo, .field-away-team-logo, .game-score {
+			display: inline-block;
+			//      width: 11%;
+			text-align: center;
+
+		}
+
+		.game-links {
+			display: block;
+			width: auto;
+			float: right;
+		}
+
+		.separator, .game-time, .game-competition, .clearfix {
+			display: none
+		}
+
+	}
+
+	/**** competition filter ****/
+	ul.competitions {
+
+		height: auto;
+		padding: 10px 0;
+		float: right;
+		line-height: normal;
+
+		li {
+			margin: auto;
+			padding: 5px;
+			color: oldlace;
+		}
+
+		.inactive {
+			background: 0
+		}
+		.is-active {
+			background: rgba(0, 0, 0, 0.1);
+			color: yellow
+		}
+
+	}
+
+}
+
+/* PREVIEW - SCHEDULED GAMES - TRIGGER */
+#js-schedule-container {
+	height: auto;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	float: left;
+	display: block;
+	position: relative;
+
+	#schedule-trigger {
+		height: auto;
+		width: 100%;
+		bottom: 0px;
+		color: $white;
+		text-align: left;
+		display: inline-block;
+		position: relative;
+		margin: auto;
+
+	}
+
+}
+
+/* UPCOMING GAMES */
+#js-schedule {
+
+	height: auto;
+	width: 100%;
+	margin: auto;
+	position: relative;
+	padding: 0;
+	z-index: 8500;
+	display: block;
+	float: left;
+
+	-webkit-transition: display 1s ease-in-out;
+	-moz-transition: display 1s ease-in-out;
+	-o-transition: display 1s ease-in-out;
+	transition: display 1s ease-in-out;
+
+	> a {
+
+		&:hover {
+			background: $aqua-15;
+			border: 1px solid $blue-85;
+		}
+
+	}
+
+	.js-single-game {
+
+		height: 320px;
+		width: 50%;
+		margin-bottom: 0;
+		padding: 14px;
+		border: 1px solid $white-25;
+		display: inline-block;
+		text-align: left;
+		position: relative;
+
+		&:hover {
+			background: $aqua-15;
+			text-decoration: none;
+		}
+
+		* {
+			display: inline;
+			text-transform: uppercase;
+			font-family: $font-special;
+			letter-spacing: 3px;
+		}
+
+
+
+		.game-date {
+			display: block;
+			background: yellow;
+			color: $steel;
+			text-transform: uppercase;
+		}
+		.game-time {
+			display: block;
+			margin-bottom: 10px
+		}
+		//
+		//    .home-team, .away-team,.separator {
+		//      display: inline-block
+		//    }
+
+		.game-competition {
+			display: block;
+			width: auto;
+			margin: 10px 0
+		}
+		.game-score .clearfix {
+			display: none
+		}
+
+		.game-links {
+
+
+			a {
+				width: auto;
+				margin: 0 5px 0 0;
+			}
+
+			p, a {
+				//        font-family: $font-special;
+				strong {
+					font-weight: normal
+				}
+			}
+
+			.field-other-links {
+				width: 100%;
+				position: absolute;
+				left: 0px;
+				bottom: 10px;
+				padding-left: 20px;
+
+				.sch_tickets {
+					background-repeat: no-repeat;
+					background-position: right;
+
+				}
+
+				.sch_matchcenter {
+					//          display: none
+				}
+			}
+
+		}
+
+	}
+
+	#ext-links {
+		font-size: 20px;
+		display: none;
+		background: $yellow;
+
+		a {
+			color: $lime;
+			text-align: center;
+		}
+	}
+
+}
+
+.gameday-text {
+	padding-left: 0;
+}
+
+
+.game-links .row {
+	margin: 0;
+	padding:0;
+}
