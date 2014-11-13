@@ -151,8 +151,8 @@ nav {
 
 	@extend nav;
 	background: $blue-50;
-	border-top: 1px solid $white-10;
-	border-bottom: 1px solid $white-10;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
 	ul {
 		height: 100px;
@@ -179,12 +179,12 @@ nav {
 
 				background-color: 0;
 				text-decoration: none;
-				color: yellow;
+				color: $yellow-90;
 				font-size: 2em;
 				letter-spacing: 0px;
 
 				&:hover {
-					background: $aqua-15;
+					color: $yellow;
 				}
 
 			}
