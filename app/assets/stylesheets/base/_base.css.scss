@@ -144,7 +144,7 @@ nav {
 }
 
 #nav-wrap {
-	background: $blue;
+	background: $blue-50;
 }
 
 #nav-primary {
@@ -160,6 +160,7 @@ nav {
 			background-color: 0;
 			padding: 5px;
 
+
 			&.logo a {
 				vertical-align: middle;
 				font-size: 2em;
@@ -171,13 +172,13 @@ nav {
 			a {
 				height: inherit;
 				display: table-cell;
-				vertical-align: middle;
+				vertical-align: top;
 
 				background-color: 0;
 				text-decoration: none;
-				color: white;
-				font-size: 1em;
-				letter-spacing: 8px;
+				color: yellow;
+				font-size: 2em;
+				letter-spacing: 0px;
 
 				&:hover {
 					color: aqua;
@@ -215,7 +216,7 @@ nav {
 	li {
 		height: 50px;
 		padding: 5px;
-		letter-spacing: 3px;
+		letter-spacing: 0px;
 		font-family: $font-special;
 		display: table;
 

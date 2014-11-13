@@ -2,7 +2,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
 	before_filter :authenticate_user!
 
-
 	# override Devise's registrations#update
 	def update
 		old_team = current_user.primary_team
@@ -15,7 +14,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 			params[:user].delete("password_confirmation")
 		end
 
-
 		# update acct
 		@user = User.find(current_user.id)
 		if @user.update_attributes(account_update_params)
@@ -24,10 +22,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
 			sign_in @user, :bypass => true
 
 			if @user.primary_team != old_team
-				flash[:notice] = "#{@user.primary_team}"
+				# flash[:notice] = "#{@user.primary_team}"
+				flash[:notice] = "Team updated."
 				redirect_to dashboard_index_path
 			else
-				flash[:notice] = 'No change, just updated something esle'
+				flash[:notice] = "Distance updated. Pick a team."
 				redirect_to teams_index_path
 			end
 
