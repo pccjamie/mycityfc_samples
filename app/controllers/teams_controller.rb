@@ -1,9 +1,5 @@
 class TeamsController < ApplicationController
 
-	def after_update_path_for(user)
-		teams_index_path
-	end
-
 	#method
 	def get_local_teams
 

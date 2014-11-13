@@ -42,6 +42,7 @@ Rails.application.routes.draw do
 	# ROOT
 
 	root 'static_pages#landing'
+
 	authenticated do
 		root :to => 'dashboard#index', :as => :authenticated
 	end

@@ -66,10 +66,12 @@ MYCITYFC.TEAMSVIEW = {
         //inputs initial value is the saved distance. this applies that value to the counter
         display.html(inputD.val());
 
+
         //otherwise, listen for change
         inputD.on('input', function () {
             display.html($(this).val());
         });
+
 
         //otherwise, listen for change
         inputD.on('mouseup', function () {
@@ -92,6 +94,7 @@ $(function () {
         var aTag = $("a[name='" + aid + "']");
         $('html,body,#content1, #content2').animate({scrollTop: aTag.offset().top}, 'slow');
     }
+
     $("a.link-to-anchor").click(function (e) {
         e.preventDefault();
         var href = $(this).attr('href').replace('#', '');

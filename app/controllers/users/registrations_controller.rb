@@ -2,8 +2,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
 	before_filter :authenticate_user!
 
+
 	# override Devise's registrations#update
 	def update
+		old_team = current_user.primary_team
 
 		#account_update_params = devise_parameter_sanitizer.sanitize(:account_update)
 
@@ -13,18 +15,28 @@ class Users::RegistrationsController < Devise::RegistrationsController
 			params[:user].delete("password_confirmation")
 		end
 
+
 		# update acct
 		@user = User.find(current_user.id)
 		if @user.update_attributes(account_update_params)
 			set_flash_message :notice, :updated
 			# Sign in the user bypassing validation in case their password changed
 			sign_in @user, :bypass => true
-			redirect_to dashboard_index_path
+
+			if @user.primary_team != old_team
+				flash[:notice] = "#{@user.primary_team}"
+				redirect_to dashboard_index_path
+			else
+				flash[:notice] = 'No change, just updated something esle'
+				redirect_to teams_index_path
+			end
+
 		else
 			render "edit"
 		end
 
 	end
+
 
 	private
 
@@ -39,5 +51,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 	def account_update_params
 		params.require(:user).permit!
 	end
+
 
 end

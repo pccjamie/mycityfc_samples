@@ -95,7 +95,6 @@ class DashboardController < ApplicationController
 
 	end
 
-
 	def get_schedule
 
 		#get the users preferred team, make sure its formatted correctly for comparison to MLS schedule,

@@ -20,28 +20,32 @@ class User < ActiveRecord::Base
 			user.email      = auth.info.email
 			user.name       = auth.info.name
 
-			#TODO - migration - add url field to db. then add to User model. Will be used to provide user direct link back to FB profile if they need  to update something.
+			#TODO - migrate url field to db. then add to User model omniauth hash. Will be used to provide user direct link back to
+			# FB profile
+			# if they need  to update something.
 
 			# user.url = auth.extra.raw_info.link
 
 			user.first_name = auth.info.first_name
 			user.picture    = auth.info.image
 
-			# temp - compensates for user not having set a current location in their FB profile
-			if auth.info.location.nil?
-				user.location = 'New York, New York'
+			# TEMP - compensates for user not having set a current location in their FB profile
+			# TODO - find a more robust solution
+			if auth.info.location == nil
+				user.location = 'Seattle, Washington'
+				user.city     = user.location.split(',').first
+				user.state    = user.location.split(',').last.strip
 			else
 				user.location = auth.info.location
+				user.city     = auth.info[:location].split(',').first
+				user.state    = auth.info[:location].split(',').last.strip
 			end
 
-			user.city     = auth.info[:location].split(',').first
-			user.state    = auth.info[:location].split(',').last.strip
 			user.password = Devise.friendly_token[0, 20]
 
 			# u.name = auth.extra.raw_info.name
 			# u.provider = auth.provider
 			# u.uid = auth.uid
-
 
 		end
 
