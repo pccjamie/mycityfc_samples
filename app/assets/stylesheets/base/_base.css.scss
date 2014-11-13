@@ -150,6 +150,9 @@ nav {
 #nav-primary {
 
 	@extend nav;
+	background: $blue-50;
+	border-top: 1px solid $white-10;
+	border-bottom: 1px solid $white-10;
 
 	ul {
 		height: 100px;
@@ -181,7 +184,7 @@ nav {
 				letter-spacing: 0px;
 
 				&:hover {
-					color: aqua;
+					background: $aqua-15;
 				}
 
 			}
@@ -306,7 +309,7 @@ nav {
 	padding-right: 5px;
 	text-align: left;
 	background: $black-25;
-	@include border-radius-top-right(10px);
+	@include border-radius-bottom-right(10px);
 }
 
 .form-title {
