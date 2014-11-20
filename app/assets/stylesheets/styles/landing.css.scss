@@ -1,3 +1,6 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 //teams controller
 @import "base/colors";
 @import "base/typography";
@@ -53,15 +56,16 @@ body#landing {
 
 		.factoid {
 			text-transform: none;
-//			font-family: $font-special;
+			//			font-family: $font-special;
 		}
 
 		.site-name {
-			margin-top: 30px;
+			margin-top: 15px;
 			padding: 0;
 
 			a {
-				font-size:  3em;
+				font-size:  1em;
+
 				color: $white;
 				letter-spacing: 10px;
 			}
@@ -194,6 +198,10 @@ body#landing {
 
 }
 
-.reveal-modal img {
-	height: 200px;
+
+// independent
+.reveal-modal {
+
+	.button {background :none; color: $blue-85}
+
 }
