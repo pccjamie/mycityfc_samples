@@ -23,6 +23,7 @@
 //= require moment
 //= require hoverintent
 //= require jquery.tinyscrollbar
+//= require youtube
 
 //= require_tree .
 

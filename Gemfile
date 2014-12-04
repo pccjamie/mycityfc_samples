@@ -38,7 +38,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.3.0'
 gem 'omniauth-facebook'
 
-# TODO - enable once I have time to work on implementing native authentication
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

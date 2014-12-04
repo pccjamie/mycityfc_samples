@@ -61,8 +61,8 @@
 		}
 
 		a {
-			padding: 2.5px;
-			margin: 2.5px 0;
+//			padding: 2.5px;
+//			margin: 2.5px 0;
 
 			&:hover {
 				background: $aqua-15;
@@ -175,24 +175,25 @@
 		width: 100%;
 		padding: 0;
 		font-family: $font-special;
-		font-size: 150%;
-		line-height: normal;
 		letter-spacing: 5px;
 		text-transform: uppercase;
 		text-align: left;
 
 		.game-date {
+			font-size: 1.5em;
 			background: 0;
 			display: inline;
 		}
 
 		.game-time {
+			font-size: 1.5em;
 			display: block;
 			width: 100%;
 			margin-bottom: 15px;
 		}
 
 		.game-competition {
+			font-size: 1.5em;
 
 			width: 100%;
 			margin-top: 5px;
@@ -201,21 +202,22 @@
 
 		.home-team,
 		.away-team {
+			font-size: 2em;
+
 			text-transform: uppercase;
 			display: inline-block;
 			overflow-wrap: break-word;
 			width: auto;
-			font-size: 2em;
 		}
 
+
 		.separator {
-			font-size: 100%;
+			font-size: 2em;
 			display: inline;
 		}
 
 		.field-home-team-logo, .field-away-team-logo {
 			height: inherit;
-			display: inline-block;
 			display: none;
 
 		}
@@ -231,13 +233,15 @@
 			text-align: left;
 
 			.row:nth-child(1) {
+				background: rgba(155, 161, 162, .25);
+				p {color: $white}
 
 			}
 			.row:nth-child(2) {
+				background: rgba(155, 161, 162, .55);
 			}
 
 			p, a {
-				font-size: 100%;
 				font-family: $font-normal;
 				display: inline-block;
 				border: none;
@@ -332,11 +336,19 @@
 	float: left;
 	width: 100%;
 
+
+	.youtube {
+		background: 0;
+	}
+
 	.orbit-container {
 		background: $steel-75;
 		background: $black-25;
-		padding: 15px;
-		padding-bottom: 0;
+		padding: 0;
+
+		.orbit-timer {
+			display: none;
+		}
 
 		.orbit-bullets-container {
 
@@ -364,10 +376,6 @@
 
 				opacity: .25;
 
-				.flex-video {
-					padding: 0;
-					-webkit-filter: grayscale(75%);
-				}
 
 			}
 
@@ -538,6 +546,8 @@
 			display: block;
 			width: auto;
 			float: right;
+
+
 		}
 
 		.separator, .game-time, .game-competition, .clearfix {

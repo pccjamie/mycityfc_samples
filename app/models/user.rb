@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
 	def self.add_info_from_omniauth(auth) #called by User::OmniauthCallbacksController
 
 		# find existing or create new
+
 		where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
 
 			# SCHEMA - https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema

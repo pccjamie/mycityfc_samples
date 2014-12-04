@@ -1,9 +1,11 @@
 # Adds provider-specific callback handling.
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
-
+	def foo
+		render :text => 'hello. i am foo.'
+	end
 	def facebook
-		#render :text => "<pre>" + request.env["omniauth.auth"].to_yaml and return
+		# render :text => "<pre>" + request.env["omniauth.auth"].to_yaml and return
 
 		@user = User.add_info_from_omniauth(request.env["omniauth.auth"])
 

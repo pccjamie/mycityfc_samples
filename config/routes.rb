@@ -17,19 +17,22 @@ Rails.application.routes.draw do
 	Redirects user to :facebook, defined in User::OmniauthCallbacksController (inherits from Devise default)
 =end
 
+	devise_scope :user do
+		get 'auth/:provider/callback', :to => 'users/omniauth_callbacks#facebook'
+	end
+
 
 	devise_for :users,
 						 :controllers => {
 							 :omniauth_callbacks => 'users/omniauth_callbacks',
-							 :registrations => 'users/registrations',
-							 :sessions => 'users/sessions'
+							 :registrations      => 'users/registrations',
+							 :sessions           => 'users/sessions'
 						 },
 						 :path_names  => {
 							 sign_in:  'devise/sessions#new', #:as => :new_user_session,
-							 sign_out: 'devise/sessions#destroy' #:as => :destroy_user_session
+							 sign_out: 'devise/sessions#destroy' #:as => :destroy_user_session,
 						 }
 
-	# Route sign out to Devise default session ctrl destroy method
 
 	# devise_scope :user do
 	# 	# if ONLY using omniauth, add a sign_in route (or use root)

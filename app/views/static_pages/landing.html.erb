@@ -61,6 +61,11 @@
 		<a class="anchor-bottom" name="login"></a>
 
 		<div id="registered" class="small-8 columns">
+
+
+			<fb:login-button scope="public_profile,email, user_location" onlogin="checkLoginState();">
+			</fb:login-button>
+
 			<h5>Sign in with Facebook
 				<span class="has-tip-2"
 							data-tooltip
@@ -71,7 +76,7 @@
 			<hr>
 			<%#= link_to image_tag('https://www.facebookbrand.com/img/assets/asset.facebook.logo.lg.png'),
 				user_omniauth_authorize_path(:facebook) %>
-			<%= link_to image_tag('fb.png'), user_omniauth_authorize_path(:facebook) %>
+			<%#= link_to image_tag('fb.png'), user_omniauth_authorize_path(:facebook) %>
 
 
 			<!--<div class="small-6 columns">-->
