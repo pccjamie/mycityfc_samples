@@ -1,20 +1,20 @@
 <div id="select-any-team">
 
-<% @teams.each do |t| %>
+	<% @teams.each do |t| %>
 
 		<div class="any-team small-4 columns">
-		<%= form_for(resource, :as => resource_name, :url => edit_user_registration_path(resource_name), :html => {:method => :put}) do |f| %>
-			<%= devise_error_messages! %>
-			<% if user_signed_in? %> <!--&& (current_user.profile || current_user.primary_team) == nil-->
+			<%= form_for(resource, :as => resource_name, :url => edit_user_registration_path(resource_name), :html => { :method => :put }) do |f| %>
+				<%= devise_error_messages! %>
+				<% if user_signed_in? %> <!--&& (current_user.profile || current_user.primary_team) == nil-->
 
-				<%= f.text_field :primary_team, :value => t.name, :type => :image, :src => t.logo %>
+					<%= f.text_field :primary_team, :value => t.name, :type => :image, :src => t.logo %>
 
-				<!--<div class="field-group actions">-->
-				<!--<%#= f.submit "Select Team", :class => 'button' %>-->
-				<!--</div>-->
+					<!--<div class="field-group actions">-->
+					<!--<%#= f.submit "Select Team", :class => 'button' %>-->
+					<!--</div>-->
 
+				<% end %>
 			<% end %>
-		<% end %>
 		</div>
-<% end %>
+	<% end %>
 </div>

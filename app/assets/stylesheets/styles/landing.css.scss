@@ -60,11 +60,11 @@ body#landing {
 		}
 
 		.site-name {
-			margin-top: 1ww5px;
+			margin-top: 1 ww5px;
 			padding: 0;
 
 			a {
-				font-size:  2em;
+				font-size: 2em;
 
 				color: $white;
 				letter-spacing: 10px;
@@ -88,7 +88,6 @@ body#landing {
 			letter-spacing: none;
 		}
 
-
 		#intro-options {
 
 			bottom: 25px;
@@ -108,17 +107,18 @@ body#landing {
 		.link-to {
 			height: auto;
 			width: 100px;
-			margin:  10px 10px 10px 0;
+			margin: 10px 10px 10px 0;
 			padding: 5px;
 			text-align: center;
 			background: $aqua-15;
 			border: 1px solid $white;
 		}
 
-
 	}
 
-	.right img {height: 25px;}
+	.right img {
+		height: 25px;
+	}
 
 }
 
@@ -134,7 +134,6 @@ body#landing {
 	background-position: top right;
 
 }
-
 
 .parallax-content {
 	max-width: 100%;
@@ -198,10 +197,12 @@ body#landing {
 
 }
 
-
 // independent
 .reveal-modal {
 
-	.button {background :none; color: $blue-85}
+	.button {
+		background: none;
+		color: $blue-85
+	}
 
 }

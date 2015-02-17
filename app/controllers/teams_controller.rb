@@ -3,8 +3,8 @@ class TeamsController < ApplicationController
 	#method
 	def get_local_teams
 
-		travel_distance = current_user.distance
-		@local_teams = Team.near([current_user.latitude, current_user.longitude], travel_distance)
+		travel_distance  = current_user.distance
+		@local_teams     = Team.near([current_user.latitude, current_user.longitude], travel_distance)
 		@travel_distance = travel_distance
 		#
 		# if travel_distance < 30
@@ -29,8 +29,8 @@ class TeamsController < ApplicationController
 		get_local_teams
 
 		#return all teams
-		teams = Team.all
-		@teams = teams.sort_by{ |t| t[:name]}
+		teams  = Team.all
+		@teams = teams.sort_by { |t| t[:name] }
 
 		# teams.map { |t|
 		# 	if t.league == 'NASL'

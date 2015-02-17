@@ -61,8 +61,8 @@
 		}
 
 		a {
-//			padding: 2.5px;
-//			margin: 2.5px 0;
+			//			padding: 2.5px;
+			//			margin: 2.5px 0;
 
 			&:hover {
 				background: $aqua-15;
@@ -210,7 +210,6 @@
 			width: auto;
 		}
 
-
 		.separator {
 			font-size: 2em;
 			display: inline;
@@ -234,7 +233,9 @@
 
 			.row:nth-child(1) {
 				background: rgba(155, 161, 162, .25);
-				p {color: $white}
+				p {
+					color: $white
+				}
 
 			}
 			.row:nth-child(2) {
@@ -336,7 +337,6 @@
 	float: left;
 	width: 100%;
 
-
 	.youtube {
 		background: 0;
 	}
@@ -375,7 +375,6 @@
 			&:not(.active) {
 
 				opacity: .25;
-
 
 			}
 
@@ -547,7 +546,6 @@
 			width: auto;
 			float: right;
 
-
 		}
 
 		.separator, .game-time, .game-competition, .clearfix {
@@ -655,8 +653,6 @@
 			letter-spacing: 3px;
 		}
 
-
-
 		.game-date {
 			display: block;
 			background: yellow;
@@ -682,7 +678,6 @@
 		}
 
 		.game-links {
-
 
 			a {
 				width: auto;
@@ -735,8 +730,7 @@
 	padding-left: 0;
 }
 
-
 .game-links .row {
 	margin: 0;
-	padding:0;
+	padding: 0;
 }

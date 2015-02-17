@@ -21,13 +21,10 @@ p.first-person {
 	text-transform: italic;
 }
 
-
 #content-1 {
 
 	header {
 	}
-
-
 
 	p {
 		color: $white;
@@ -117,7 +114,9 @@ p.first-person {
 					padding: 0;
 					float: left;
 
-					.team-name {color: lightgoldenrodyellow;}
+					.team-name {
+						color: lightgoldenrodyellow;
+					}
 
 					.team-distance {
 						font-size: 200%;
@@ -186,14 +185,15 @@ p.first-person {
 			form {
 				.local-team {
 
-					.team-info {width: 65%;}
+					.team-info {
+						width: 65%;
+					}
 
 					.team-logo-button {
 						width: 35%;
 						background: 0;
 						background-repeat: no-repeat;
 						background-position: center center;
-
 
 						@include grayscale(0%);
 

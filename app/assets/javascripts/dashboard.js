@@ -31,28 +31,36 @@ var MYCITYFC = {
         // TODO edit dates
         filterSchedule: function () {
 
-            var today = moment().format("MM-DD-YYYY"),
+            var today = moment().format('MM-DD-YYYY'),
+                nextYear = moment().add(1, 'years').format('YYYY'),
                 schedule = $('#js-schedule'),
-                nextGameContainer = $('#js-next-game'),
+//                nextGameContainer = $('#js-next-game'),
                 nextGameHeader = $('#js-next-game header h2'),
                 game = $('.js-single-game'),
                 games = game.toArray(),
-                extLinks = $('#ext-links');
+                extLinks = $('#ext-links'),
+                myTeam = $('#nav-primary ul:nth-of-type(2) li a:first').html();
 
 
-            //look at ALL games which have been returned by Scrape
+            //look at ALL games which have been returned by scrape
             $(games).each(function () {
 
+                //local var
                 var game = $(this),
                     gameDate = moment(game.children('.game-date').text()).format('MM-DD-YYYY'); //removes day of week for calc.
 
+                console.log('----var gameDate ----');
+                console.log(gameDate + ':' + typeof gameDate);
+                console.log('----var today ----');
+                console.log(today + ':' + typeof today);
+
                 if (gameDate < today) {
+
                     //TODO handle this
                     game.wrap('<a>');
                     game.parent('a').attr('href', function () {
                         return game.find('.sch_matchcenter').attr('href');
                     });
-
                     game.children('.game-links').remove();
 
 //                var obj = game[0];
@@ -70,9 +78,7 @@ var MYCITYFC = {
                     game.appendTo(schedule);
                     $(".js-single-game:first").appendTo('#js-next-game-section #js-next-game');
 
-//            if (gameDate == today) {
-                    if (1 == 1) {
-
+                    if (gameDate === today) {
 //                    var logo = $(this).find('.field-home-team-logo img').attr("src");
 //                    var tickets = $(this).find('.sch_tickets').css('background-image', 'url(' + logo + ')');
                         $('#js-gameday-trigger').css('display', 'block');
@@ -80,29 +86,34 @@ var MYCITYFC = {
                         $(this).find('.game-links .row:nth-child(1)').prepend('<div id="label-tv" class="small-3 columns">Watch On:</div>');
                         $(this).find('.game-links .row:nth-child(2)').prepend('<div id="label-other" class="small-3 columns">Tickets:</div>');
                         $('#js-gameday').show();
-//                    setTimeout(function () {
-//                        $('#js-gameday').show();
-//                    }, 0);
 
                     }
 
                 }
 
-
-                //limit displayed games
-                var remainingGames = schedule.children(game),
-                //TODO make limit adjustable
-                    limit = 3;
-                if (remainingGames.length > limit) {
-                    remainingGames.slice(limit).hide();
-                    extLinks.show();
-                } else {
-                    extLinks.hide();
-                }
+                //TODO determine whether any part of this needs to stay within this loop
+//                //limit displayed games
+//                var remainingGames = schedule.children(game),
+//                //TODO make limit adjustable
+//                    limit = 3;
+////                if (remainingGames.length === 0) {
+//
+//                    $('#js-next-game-section #js-next-game').append('Offseason! Your team will return to the pitch in '+nextYear);
+//
+//                } else {
+//                    if (remainingGames.length > limit) {
+//                        remainingGames.slice(limit).hide();
+//                        extLinks.show();
+//                    } else {
+//                        extLinks.hide();
+//                    }
+//                }
 
                 //adds class to each game for Results filter
-                var game_type = $(this).children('.game-competition').text();
-                switch (game_type) {
+                var gameType = $(this).children('.game-competition').text();
+                console.log('----var gameType ----');
+                console.log(gameType + ':' + typeof gameType);
+                switch (gameType) {
 
                     case "MLS Regular Season":
                         $(this).addClass('type-mls-reg');
@@ -125,6 +136,23 @@ var MYCITYFC = {
 
 
             });
+
+            //limit displayed games
+            var remainingGames = schedule.children(game),
+            //TODO make limit adjustable
+                limit = 3;
+
+            //TODO function to account for offseason. WIP / A
+            if (remainingGames.length === 0) {
+                $('#js-next-game-section #js-next-game').append('Your ' + myTeam + ' will return to the pitch in ' + nextYear + '. Schedule details are not yet available.');
+            } else {
+                if (remainingGames.length > limit) {
+                    remainingGames.slice(limit).hide();
+                    extLinks.show();
+                } else {
+                    extLinks.hide();
+                }
+            }
 
         },
 
@@ -281,8 +309,8 @@ var MYCITYFC = {
 
 //            $('#js-schedule .js-single-game .home-team:empty').parent().empty().text('Pending');
 
-            var poo = $('#js-schedule .js-single-game .home-team:empty').siblings(':not(".game-date")');
-            $(poo).empty().parent().append('<p>Game information unavailable at this time.</p>');
+            var noGameInfo = $('#js-schedule .js-single-game .home-team:empty').siblings(':not(".game-date")');
+            $(noGameInfo).empty().parent().append('<p>Game information unavailable at this time.</p>');
 
 
             if (($('a.game-matchcenter') || $('a.game-tickets')).empty()) {
@@ -292,8 +320,8 @@ var MYCITYFC = {
 
         displayGameDay: function () {
 
-            var gameDay = $('#js-gameday'),
-                gameDayContent = $('#js-gameday .sleeve'),
+//            var gameDay = $('#js-gameday'),
+            var gameDayContent = $('#js-gameday .sleeve'),
                 gameDayToggle = $('#js-gameday-toggle');
 
             gameDayToggle.click(function () {

@@ -93,9 +93,10 @@ p {
 	}
 }
 
-
-hr {background: transparent;
-border-color: transparent}
+hr {
+	background: transparent;
+	border-color: transparent
+}
 
 //flash messages
 .notice, .alert {
@@ -163,7 +164,6 @@ nav {
 			background-color: 0;
 			padding: 5px;
 
-
 			&.logo a {
 				vertical-align: middle;
 				font-size: 2em;
@@ -206,6 +206,7 @@ nav {
 	}
 
 }
+
 #nav-secondary {
 
 	@extend nav;
@@ -213,8 +214,12 @@ nav {
 	margin-top: 0;
 	padding: 0;
 
-	ul {display: table}
-	ul#admin-menu {padding-right:0}
+	ul {
+		display: table
+	}
+	ul#admin-menu {
+		padding-right: 0
+	}
 
 	li {
 		height: 50px;
@@ -223,7 +228,6 @@ nav {
 		font-family: $font-special;
 		display: table;
 
-
 		a {
 
 			letter-spacing: 3px;
@@ -231,10 +235,10 @@ nav {
 			color: $white;
 
 			img {
-					border: 1px solid $white-25;
-					height: 40px;
-//					padding: 4px;
-				}
+				border: 1px solid $white-25;
+				height: 40px;
+				//					padding: 4px;
+			}
 
 			&:hover {
 				text-decoration: none;
@@ -252,9 +256,10 @@ nav {
 
 }
 
+.dropdown {
+	text-align: right;
+}
 
-
-.dropdown {text-align:right;}
 .f-dropdown {
 
 	background: $blue;
@@ -267,10 +272,10 @@ nav {
 
 	li {
 		display: inline-block;
-		width:100%;
+		width: 100%;
 
 		a {
-			background:transparent;
+			background: transparent;
 			color: $white;
 
 			&:hover {
@@ -335,7 +340,9 @@ h4.section-title {
 
 //tooltips
 .has-tip {
-	height: 40px;width: 40px;padding: 5px;
+	height: 40px;
+	width: 40px;
+	padding: 5px;
 	line-height: normal;
 	color: $black;
 	background: $yellow;
@@ -358,7 +365,7 @@ h4.section-title {
 
 }
 
-.has-tip-2{
+.has-tip-2 {
 	@extend .has-tip;
 	display: block;
 }
@@ -384,11 +391,11 @@ h4.section-title {
 
 		top: 0px;
 		left: 5px;
-		text-align:center;
+		text-align: center;
 		z-index: 9999;
-		position:fixed;
+		position: fixed;
 		font-size: 12px;
-//		color: $aqua;
+		//		color: $aqua;
 		&:hover {
 			color: red;
 		}
@@ -406,7 +413,7 @@ footer {
 	background-color: $yellow-50;
 	position: relative;
 	//  left: 0;
-	  bottom: 0;
+	bottom: 0;
 	display: block;
 	* aside.right {
 		position: absolute;

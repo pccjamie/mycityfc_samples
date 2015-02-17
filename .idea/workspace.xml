@@ -2,18 +2,93 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa39e5d5-1e35-42b4-b428-8eff8016cc5d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/youtube.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20141104210831_devise_create_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20141104210831_devise_create_users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20141104211917_create_teams.rb" afterPath="$PROJECT_DIR$/db/migrate/20141104211917_create_teams.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20141104212738_add_omni_auth_columns_to_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20141104212738_add_omni_auth_columns_to_users.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20141104213623_add_omni_auth_facebook_columns_to_user.rb" afterPath="$PROJECT_DIR$/db/migrate/20141104213623_add_omni_auth_facebook_columns_to_user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20141108145602_add_fb_profile_url_to_user.rb" afterPath="$PROJECT_DIR$/db/migrate/20141108145602_add_fb_profile_url_to_user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20141108154244_add_latitude_and_longitude_to_user.rb" afterPath="$PROJECT_DIR$/db/migrate/20141108154244_add_latitude_and_longitude_to_user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20141108154321_add_search_distance_to_user.rb" afterPath="$PROJECT_DIR$/db/migrate/20141108154321_add_search_distance_to_user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20141110210710_add_info_to_team.rb" afterPath="$PROJECT_DIR$/db/migrate/20141110210710_add_info_to_team.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/404.html" afterPath="$PROJECT_DIR$/public/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/422.html" afterPath="$PROJECT_DIR$/public/422.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/500.html" afterPath="$PROJECT_DIR$/public/500.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/base/_base.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/base/_base.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/base/_colors.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/base/_colors.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_displays_league_slider.erb" afterPath="$PROJECT_DIR$/app/views/partials/_displays_league_slider.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_game_previews.html.erb" afterPath="$PROJECT_DIR$/app/views/partials/_game_previews.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_game_results.html.erb" afterPath="$PROJECT_DIR$/app/views/partials/_game_results.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_gameday.html.erb" afterPath="$PROJECT_DIR$/app/views/partials/_gameday.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/shared/_links.erb" afterPath="$PROJECT_DIR$/app/views/users/shared/_links.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_login.html.erb" afterPath="$PROJECT_DIR$/app/views/partials/_login.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_main_display_social.html.erb" afterPath="$PROJECT_DIR$/app/views/partials/_main_display_social.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/base/_media.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/base/_media.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/base/_mixins.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/base/_mixins.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_nav_main.html.erb" afterPath="$PROJECT_DIR$/app/views/partials/_nav_main.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_nav_utility.html.erb" afterPath="$PROJECT_DIR$/app/views/partials/_nav_utility.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_next_game.html.erb" afterPath="$PROJECT_DIR$/app/views/partials/_next_game.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_select_any_team.html2.erb" afterPath="$PROJECT_DIR$/app/views/partials/_select_any_team.html2.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_select_mls_team.html.erb" afterPath="$PROJECT_DIR$/app/views/partials/_select_mls_team.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_travel_distance.html.erb" afterPath="$PROJECT_DIR$/app/views/partials/_travel_distance.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/_videos.html.erb" afterPath="$PROJECT_DIR$/app/views/partials/_videos.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-34243f2fef5c3be7a99ccf8a074b919c.css" afterPath="$PROJECT_DIR$/public/assets/application-34243f2fef5c3be7a99ccf8a074b919c.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-3c7810698e126a00edb48853aa018c36.js" afterPath="$PROJECT_DIR$/public/assets/application-3c7810698e126a00edb48853aa018c36.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-6e515513169a3e39f69e3e1138bf3661.css" afterPath="$PROJECT_DIR$/public/assets/application-6e515513169a3e39f69e3e1138bf3661.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-716a00941695e9c41f3156eab617b2c1.css" afterPath="$PROJECT_DIR$/public/assets/application-716a00941695e9c41f3156eab617b2c1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-8d0cbce47eec2455356be79da58e3bc5.css" afterPath="$PROJECT_DIR$/public/assets/application-8d0cbce47eec2455356be79da58e3bc5.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-a6a589f9f9c21ebc0624c3e57286e604.js" afterPath="$PROJECT_DIR$/public/assets/application-a6a589f9f9c21ebc0624c3e57286e604.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-c499034af8670ef7cf5251786a534dcb.js" afterPath="$PROJECT_DIR$/public/assets/application-c499034af8670ef7cf5251786a534dcb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-d3ec42f703440306fd5572b62b4acd22.js" afterPath="$PROJECT_DIR$/public/assets/application-d3ec42f703440306fd5572b62b4acd22.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-e28967cd6e3558ceb870625a42274263.css" afterPath="$PROJECT_DIR$/public/assets/application-e28967cd6e3558ceb870625a42274263.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-e48f9cf9ea208df3fd7ef8ebd7cf7b18.css" afterPath="$PROJECT_DIR$/public/assets/application-e48f9cf9ea208df3fd7ef8ebd7cf7b18.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-e9e28e90c936ac942ccaf863f864d47f.css" afterPath="$PROJECT_DIR$/public/assets/application-e9e28e90c936ac942ccaf863f864d47f.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-ec247200e998c2889a5adece406112b3.css" afterPath="$PROJECT_DIR$/public/assets/application-ec247200e998c2889a5adece406112b3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-eeab0a833cf72d8378bd0a1b9afd5e29.css" afterPath="$PROJECT_DIR$/public/assets/application-eeab0a833cf72d8378bd0a1b9afd5e29.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-fe4f36d3a27aae1172d59e67b70009f4.css" afterPath="$PROJECT_DIR$/public/assets/application-fe4f36d3a27aae1172d59e67b70009f4.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-ffaa769c984edcb227c30655282aa8d7.css" afterPath="$PROJECT_DIR$/public/assets/application-ffaa769c984edcb227c30655282aa8d7.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ru" afterPath="$PROJECT_DIR$/config.ru" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/styles/dashboard.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/styles/dashboard.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/dashboard.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/dashboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dashboard_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/dashboard_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/dashboard_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/styles/forms.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/styles/forms.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/foundation_and_overrides.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/foundation_and_overrides.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/hoverintent.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/hoverintent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.cycle2.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.cycle2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.cycle2.video.min.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.cycle2.video.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.tinyscrollbar.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.tinyscrollbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.tinyscrollbar.min.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/jquery.tinyscrollbar.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/styles/landing.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/styles/landing.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/landing.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/landing.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/load_order.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/load_order.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest-17d9b6cca9ff30ef8a11e41da0bd515e.json" afterPath="$PROJECT_DIR$/public/assets/manifest-17d9b6cca9ff30ef8a11e41da0bd515e.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/vendor/modernizr-302eb3bc06133e3af4498efe1172cd96.js" afterPath="$PROJECT_DIR$/public/assets/vendor/modernizr-302eb3bc06133e3af4498efe1172cd96.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/moment.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/moment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/registrations/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/foundation-icons/preview-359864f529e8df788589b7a3e20e1ba4.html" afterPath="$PROJECT_DIR$/public/assets/foundation-icons/preview-359864f529e8df788589b7a3e20e1ba4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/foundation-icons/preview-a1873ca0866585515ed2d0b12a34ee0f.html" afterPath="$PROJECT_DIR$/public/assets/foundation-icons/preview-a1873ca0866585515ed2d0b12a34ee0f.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/rails" afterPath="$PROJECT_DIR$/bin/rails" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/rake" afterPath="$PROJECT_DIR$/bin/rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/spring" afterPath="$PROJECT_DIR$/bin/spring" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/static_pages.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/static_pages.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/static_pages_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/static_pages_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/team_test.rb" afterPath="$PROJECT_DIR$/test/models/team_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/styles/teams.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/styles/teams.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/teams_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/teams_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/teams_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/teams_controller_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/test.rb" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_helper.rb" afterPath="$PROJECT_DIR$/test/test_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/models/user_test.rb" afterPath="$PROJECT_DIR$/test/models/user_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
     </list>
     <ignored path="mycityfc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,7 +132,7 @@
       <file leaf-file-name="static_pages.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/static_pages.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="28.791666" vertical-offset="901" max-vertical-offset="1815">
+            <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1770">
               <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
@@ -67,8 +142,8 @@
       <file leaf-file-name="devise.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3164" max-vertical-offset="4125">
-              <caret line="248" column="82" selection-start-line="248" selection-start-column="82" selection-end-line="248" selection-end-column="82" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3164" max-vertical-offset="4110">
+              <caret line="247" column="82" selection-start-line="247" selection-start-column="82" selection-end-line="247" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -87,7 +162,7 @@
       <file leaf-file-name="application.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+            <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300">
               <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
               <folding />
             </state>
@@ -97,20 +172,54 @@
       <file leaf-file-name="_videos.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/partials/_videos.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="405">
+            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="405">
               <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles/dashboard.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2667" max-vertical-offset="11115">
+              <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teams.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/teams.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1770">
+              <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="2925">
+              <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#8496#8579#0" expanded="true" />
+                <element signature="e#10801#11269#0" expanded="true" />
+                <element signature="e#11308#11870#0" expanded="true" />
+                <element signature="e#11518#11858#0" expanded="true" />
+                <element signature="e#11918#12146#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.css.scss" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles/dashboard.css.scss">
+      <file leaf-file-name="landing.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/static_pages/landing.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6125137" vertical-offset="2667" max-vertical-offset="11205">
-              <caret line="215" column="0" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.11846318" vertical-offset="819" max-vertical-offset="2415">
+              <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -119,11 +228,9 @@
       <file leaf-file-name="dashboard_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/dashboard_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
+            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2355">
               <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-              <folding>
-                <element signature="e#375#2825#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,7 +265,6 @@
         <option value="$PROJECT_DIR$/app/models/team.rb" />
         <option value="$PROJECT_DIR$/app/views/partials/_travel_distance.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/landing.js" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/views/users/registrations/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/partials/_nav_main.html.erb" />
@@ -180,24 +286,25 @@
         <option value="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/partials/_nav_utility.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/static_pages/landing.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/dashboard.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/static_pages.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/vendor/assets/javascripts/youtube.js" />
         <option value="$PROJECT_DIR$/app/views/partials/_videos.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/styles/dashboard.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/landing.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/dashboard.js" />
+        <option value="$PROJECT_DIR$/app/views/static_pages/landing.html.erb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1862" />
+    <option name="width" value="1916" />
     <option name="height" value="1058" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -635,8 +742,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -651,6 +758,7 @@
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesRuby" value="false" />
     <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
+    <property name="LayoutCode.rearrangeEntries" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -819,16 +927,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1862" height="1058" extended-state="6" />
+    <frame x="0" y="22" width="1916" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962587" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20354457" sideWeight="0.49949443" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20302714" sideWeight="0.49949443" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36734694" sideWeight="0.50050557" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -836,6 +943,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962587" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52679473" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1060,13 +1168,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/landing.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91141945" vertical-offset="121" max-vertical-offset="2445">
-          <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32778355" vertical-offset="0" max-vertical-offset="961">
@@ -1106,7 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
           <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1114,7 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
           <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,39 +1225,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/landing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/teams.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#61#447#0" expanded="false" />
-            <element signature="e#1537#2209#0" expanded="false" />
-            <element signature="e#2243#2772#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboard/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="420">
           <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/static_pages.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="28.791666" vertical-offset="901" max-vertical-offset="1815">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1166,14 +1236,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41684434" vertical-offset="419" max-vertical-offset="1380">
           <caret line="54" column="60" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19210246" vertical-offset="0" max-vertical-offset="937">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09365244" vertical-offset="0" max-vertical-offset="961">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/assets/javascripts/youtube.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26898733" vertical-offset="0" max-vertical-offset="948">
+          <caret line="5" column="2321" selection-start-line="5" selection-start-column="2321" selection-end-line="5" selection-end-column="2321" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/static_pages.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="1815">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3164" max-vertical-offset="4125">
-          <caret line="248" column="82" selection-start-line="248" selection-start-column="82" selection-end-line="248" selection-end-column="82" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3164" max-vertical-offset="4110">
+          <caret line="247" column="82" selection-start-line="247" selection-start-column="82" selection-end-line="247" selection-end-column="82" />
           <folding />
         </state>
       </provider>
@@ -1194,52 +1295,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19210246" vertical-offset="0" max-vertical-offset="937">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09365244" vertical-offset="0" max-vertical-offset="961">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <element signature="e#1299#1371#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23413111" vertical-offset="0" max-vertical-offset="961">
-          <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/_videos.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="405">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="405">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/assets/javascripts/youtube.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles/dashboard.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26898733" vertical-offset="0" max-vertical-offset="948">
-          <caret line="5" column="2321" selection-start-line="5" selection-start-column="2321" selection-end-line="5" selection-end-column="2321" />
-          <folding>
-            <element signature="e#3178#3505#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="2667" max-vertical-offset="11205">
+          <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1247,16 +1315,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
           <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/teams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/landing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23413111" vertical-offset="0" max-vertical-offset="961">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="2925">
+          <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
           <folding>
-            <element signature="e#375#2825#0" expanded="true" />
+            <element signature="e#8496#8579#0" expanded="true" />
+            <element signature="e#10801#11269#0" expanded="true" />
+            <element signature="e#11308#11870#0" expanded="true" />
+            <element signature="e#11518#11858#0" expanded="true" />
+            <element signature="e#11918#12146#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles/dashboard.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/static_pages/landing.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6125137" vertical-offset="2667" max-vertical-offset="11205">
-          <caret line="215" column="0" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.11846318" vertical-offset="819" max-vertical-offset="2415">
+          <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
           <folding />
         </state>
       </provider>

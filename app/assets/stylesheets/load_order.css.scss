@@ -1,18 +1,14 @@
 //foundation
 @import "foundation_and_overrides";
-
 //global
 @import "base/colors";
 @import "base/typography";
 @import "base/mixins";
 @import "base/media";
 @import "base/base";
-
 //view specific
-
 @import "styles/dashboard";
 @import "styles/teams";
-
 @import "styles/landing";
 @import "styles/forms";
 

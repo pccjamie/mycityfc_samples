@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title><%= content_for?(:title) ? yield(:title) : "MYCITYFC.COM" %></title>
-	<%= stylesheet_link_tag    'application', media: 'all'%>
+	<%= stylesheet_link_tag 'application', media: 'all' %>
 	<%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=BenchNine|Pathway+Gothic+One|Numans|Carrois+Gothic+SC|Inconsolata' %>
 
@@ -20,9 +20,9 @@
 	<span id="view-tips">BETA</span>
 </div>
 
-
 <div class="row">
 	<p class="notice"><%= notice %></p>
+
 	<p class="alert"><%= alert %></p>
 </div>
 
@@ -38,6 +38,5 @@
 
 </body>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
 
 </html>
