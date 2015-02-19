@@ -1,21 +1,26 @@
 <div id="js-videos">
+
 	<header>
 		<h4 class="section-title extra-padding">
 			YouTube
+			<br>
 			<span class="has-tip" data-tooltip aria-haspopup="true" title="Videos retrieved from YouTube - based on user's selected team.">?</span>
 		</h4>
 
 	</header>
+	<%#= @video_ids %>
+	<br>
+
+	<!--<p class="notice"><%#= notice_youtube %></p>-->
 
 	<ul data-orbit data-options="animation_speed:500;">
-		<% @video_ids.each do |v| %>
+		<% @video_ids.each do |id| %>
 			<li>
-				<!--<iframe width="420" height="315" src="http://www.youtube.com/embed/<%= v %>?enablejsapi=1" frameborder="0"-->
+				<!--<iframe width="420" height="315" src="http://www.youtube.com/embed/<%#= id %>?enablejsapi=1" frameborder="0"-->
 				<!--allowfullscreen id="player" class="video-slide"></iframe>-->
-				<div class="youtube" id="<%= v %>" style="width: 387px; height: 213px;"></div>
+				<div class="youtube" id="<%= id %>" style="width: 387px; height: 213px;"></div>
 			</li>
 		<% end %>
 	</ul>
 </div>
 
-<p class="notice"><%= notice_youtube %></p>

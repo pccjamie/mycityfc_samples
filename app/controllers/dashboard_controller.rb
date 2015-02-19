@@ -14,82 +14,83 @@ class DashboardController < ApplicationController
 		[@time, @today, @tomorrow, @yesterday]
 	end
 
+
+	def create_video_array(ch_username)
+
+		if ch_username === 'mls'
+			@video_ids = []
+		end
+
+		#TODO PRI 1 - move api info into env cfg file
+		api_base = 'https://www.googleapis.com/youtube/v3'
+		api_key  = 'AIzaSyDRWryJz70D_ybAHQmhuiwgrHtYOuEo9tA'
+
+		videos    = HTTParty.get("#{api_base}/search?part=id%2C+snippet&channelId=#{ch_username}&maxResults=2&order=date&key=#{api_key}")
+		video_ids = []
+		videos["items"].each do |item|
+			video_ids.push(item["id"]["videoId"])
+		end
+
+		@video_ids = video_ids
+
+	end
+
+
 	def get_video
 
 		# some_team = current_user.primary_team.split(' ').map(&:strip) # DOES NOT WORK FOR SOMETHING LIKE FC DALLAS or CHIVAS USA
-		my_saved_team = current_user.primary_team.strip
+		saved_team = current_user.primary_team.strip
 
-		#array of teams
-		#TODO move these into env cfg file
-		yt_base       = 'https://www.googleapis.com/youtube/v3'
-		yt_key        = 'AIzaSyDRWryJz70D_ybAHQmhuiwgrHtYOuEo9tA' #ADD TO ENVCFGVAR
+		# SCRAPE YOUTUBE
+		domain     = "https://www.youtube.com"
+		page       = "#{domain}/user/mls/channels"
+		nodes      = Nokogiri::HTML(open(page))
+		channels   = nodes.css('.yt-lockup-title a')
+		channels   = channels.to_a
 
+		# TODO - no longer making new array. Remove?
+		#yt_channels = channel_names.map(&:text)
 
-		yt_channels = Nokogiri::HTML(open("https://www.youtube.com/user/mls/channels")).css('.yt-lockup-title a').to_a
+		# ITERATES THROUGH ARRAY AND CHECKS EACH NODE FOR PRESENCE OF SAVED TEAM NAME
+		channels.each do |val|
+			# puts 'CHECKING AGAINST:'
+			# puts val
+			ch_name = val.text
 
+			# TODO is this gsub necessary?
+			# yt_team = yt_team.gsub('(Official)', '')
 
-		yt_channels.each do |val|
+			if saved_team === ch_name
+				flash[:notice_youtube] = "#{saved_team} videos."
 
-			#1. Format team name
-			#TODO - regex. this is brittle
-			yt_team = val.text.to_s
-			yt_team = yt_team.gsub('(Official)', '')
-			yt_team = yt_team.strip
+				#TODO - work on regex. this is brittle
+				# FORMAT USERNAME
+				ch_id                  = val.attributes['href']
+				ch_id                  = ch_id.to_s
+				ch_username            = ch_id.strip.gsub('/channel/', '')
 
-			# 3. Get YouTube video id for URL
-			if my_saved_team == yt_team
+				# TODO determine if any part of this older get request is still necessary
+				# response = HTTParty.get("#{api_base}/channels?part=id%2C+snippet&forUsername=soundersfcdotcom&key=#{api_key}")
+				# channel_id = response["items"][0]["id"]
 
-				flash[:notice_youtube] = "Match: LOCAL NAME: #{my_saved_team} = YOUTUBE NAME: #{yt_team}"
+				# CALL VIDEO ARRAY METHOD
+				create_video_array(ch_username)
 
-
-				#2. Format YouTube user name
-				#TODO regex
-				yt_username            = val.attributes['href'].to_s
-				yt_username            = yt_username.gsub('/user/', '')
-
-
-				response = HTTParty.get("#{yt_base}/channels?part=id%2C+snippet&forUsername=#{yt_username}&key=#{yt_key}")
-
-				channel_id   = response["items"][0]["id"]
-				channel_info = HTTParty.get("#{yt_base}/search?part=id%2C+snippet&channelId=#{channel_id}&maxResults=2&order=date&key=#{yt_key}")
-				video_ids    = []
-				channel_info["items"].each do |item|
-					video_ids.push(item["id"]["videoId"])
+				respond_to do |f|
+					f.html
 				end
 
-				@video_ids = video_ids
+				break
 
-				# respond_to do |f|
-				#   f.html
-				# end
 			else
-				#IDEAL - no match. Send empty array to view so render doesn't break
-				@video_ids             = []
-				flash[:notice_youtube] = "Nada"
 
-				#PATCH: provide MLS channel as backup until scraped names are properly vetted
-				response               = HTTParty.get("#{yt_base}/channels?part=id%2C+snippet&forUsername=mls&key=#{yt_key}")
-
-				channel_id   = response["items"][0]["id"]
-				channel_info = HTTParty.get("#{yt_base}/search?part=id%2C+snippet&channelId=#{channel_id}&maxResults=2&order=date&key=#{yt_key}")
-				video_ids    = []
-				channel_info["items"].each do |item|
-					video_ids.push(item["id"]["videoId"])
-				end
-				@video_ids = video_ids
-
+				flash[:notice_youtube] = "No matches found. Here are some MLS videos."
+				# PROVIDE MLS CHANNEL AS USERNAME, SINCE ERB EXPECTS VALUES
+				ch_username            = 'mls'
+				# CALL VIDEO ARRAY METHOD
+				create_video_array(ch_username)
 
 			end
-
-			#
-			# channel_id = response["items"][0]["id"]
-			# channel_info = HTTParty.get("#{yt_base}/search?part=id%2C+snippet&channelId=#{channel_id}&maxResults=1&order=date&key=#{yt_key}")
-			# video_ids = []
-			# channel_info["items"].each do |item|
-			#   video_ids.push(item["id"]["videoId"])
-			# end
-			# @video_ids = video_ids
-
 
 		end
 
@@ -143,7 +144,6 @@ class DashboardController < ApplicationController
 		get_time
 		get_schedule
 		get_video
-
 
 	end
 
